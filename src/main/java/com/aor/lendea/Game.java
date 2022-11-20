@@ -1,6 +1,8 @@
 package com.aor.lendea;
 
 import com.aor.lendea.gui.LanternaGUI;
+import com.aor.lendea.states.MenuState;
+import com.aor.lendea.model.menu.Menu;
 import com.aor.lendea.states.State;
 
 import java.awt.*;
@@ -13,7 +15,8 @@ public class Game {
     private State state;
 
     public Game() throws FontFormatException, IOException, URISyntaxException {
-        this.gui = new LanternaGUI(20, 20);
+        this.gui = new LanternaGUI(1920, 1080);
+        this.state = new MenuState(new Menu());
     }
 
     public static void main(String[] args) throws IOException, FontFormatException, URISyntaxException {

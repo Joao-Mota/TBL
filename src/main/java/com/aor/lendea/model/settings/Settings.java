@@ -31,12 +31,15 @@ public class Settings {
         return currentEntry == i;
     }
 
-    public boolean isSelectedExit() {
-        return isSelected(1);
+    public boolean isSelectedGoBack() {
+        return isSelected(2);
     }
 
-    public boolean isSelectedStart() {
+    public boolean isSelectedMusic() {
         return isSelected(0);
+    }
+    public boolean isSelectedVolume() {
+        return isSelected(1);
     }
 
     public int getNumberEntries() {

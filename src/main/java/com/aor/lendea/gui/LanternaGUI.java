@@ -59,7 +59,7 @@ public class LanternaGUI implements GUI {
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         ge.registerFont(font);
 
-        Font loadedFont = font.deriveFont(Font.PLAIN, 25);
+        Font loadedFont = font.deriveFont(Font.PLAIN, 50);
         AWTTerminalFontConfiguration fontConfig = AWTTerminalFontConfiguration.newInstance(loadedFont);
         return fontConfig;
     }
@@ -83,12 +83,12 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawHero(Position position) {
-        drawCharacter(position.getX(), position.getY(), 'H', "#FFD700");
+        drawCharacter(position.getX(), position.getY(), 'L', "#FA1616");
     }
 
     @Override
     public void drawWall(Position position) {
-        drawCharacter(position.getX(), position.getY(), '#', "#3333FF");
+        drawCharacter(position.getX(), position.getY(), '#', "#3774D8");
     }
 
     @Override

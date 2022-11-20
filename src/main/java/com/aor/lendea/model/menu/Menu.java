@@ -11,6 +11,7 @@ public class Menu {
         this.entries = Arrays.asList("Start", "Settings", "Exit");
     }
 
+
     public void nextEntry() {
         currentEntry++;
         if (currentEntry > this.entries.size() - 1)
@@ -32,10 +33,11 @@ public class Menu {
     }
 
     public boolean isSelectedExit() {
-        return isSelected(1);
+        return isSelected(2);
     }
+    public boolean isSelectedSettings() { return isSelected(1);}
 
-    public boolean isSelectedStart() {
+    public boolean isSelectedPlay() {
         return isSelected(0);
     }
 
