@@ -3,6 +3,7 @@ package com.aor.lendea.model.layout.arena;
 import com.aor.lendea.model.layout.elements.Lendea;
 import com.aor.lendea.model.layout.elements.Monster;
 import com.aor.lendea.model.layout.elements.Wall;
+import com.aor.lendea.model.layout.elements.monsters.MonsterCamelo;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -64,7 +65,7 @@ public class LoaderArenaBuilder extends ArenaBuilder {
         for (int y = 0; y < lines.size(); y++) {
             String line = lines.get(y);
             for (int x = 0; x < line.length(); x++)
-                if (line.charAt(x) == 'M') monsters.add(new Monster(x, y));
+                if (line.charAt(x) == 'M') monsters.add(new MonsterCamelo(x, y));
         }
 
         return monsters;

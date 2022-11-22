@@ -8,7 +8,7 @@ public class Help {
     private int currentEntry = 0;
 
     public Help() {
-        this.entries = Arrays.asList("Go Back");
+        this.entries = Arrays.asList("Press Enter to go back");
     }
 
     public void nextEntry() {

@@ -3,6 +3,7 @@ package com.aor.lendea.model.layout.arena;
 import com.aor.lendea.model.layout.elements.Lendea;
 import com.aor.lendea.model.layout.elements.Monster;
 import com.aor.lendea.model.layout.elements.Wall;
+import com.aor.lendea.model.layout.elements.monsters.MonsterCamelo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +56,7 @@ public class RandomArenaBuilder extends ArenaBuilder {
         List<Monster> monsters = new ArrayList<>();
 
         while (monsters.size() < numberOfMonsters)
-            monsters.add(new Monster(rng.nextInt(width - 2) + 1, rng.nextInt(height - 2) + 1));
+            monsters.add(new MonsterCamelo(rng.nextInt(width - 2) + 1, rng.nextInt(height - 2) + 1));
 
         return monsters;
     }
