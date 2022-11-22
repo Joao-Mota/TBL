@@ -19,7 +19,9 @@ public class GameViewer extends Viewer<Arena> {
         drawElements(gui, getModel().getMonsters(), new MonsterViewer());
         drawElement(gui, getModel().getLendea(), new LendeaViewer());
 
-        gui.drawText(new Position(0, 0), "Health: " + getModel().getLendea().getEnergy(), "#FA1616");
+        gui.drawText(new Position(35, 19), "HP: " + getModel().getLendea().getHealth(), "#FA1616");
+        gui.drawText(new Position(35, 20), "SP: " + getModel().getLendea().getStrike(), "#2AD3FF");
+        gui.drawText(new Position(35, 21), "DP: " + getModel().getLendea().getDefense(), "#75FF7E");
     }
 
     private <T extends Element> void drawElements(GUI gui, List<T> elements, ElementViewer<T> viewer) {

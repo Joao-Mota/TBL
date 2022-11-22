@@ -1,4 +1,4 @@
-package com.aor.lendea.viewer.menu;
+package com.aor.lendea.viewer.settings;
 
 import com.aor.lendea.gui.GUI;
 import com.aor.lendea.model.Position;
@@ -12,12 +12,12 @@ public class SettingsViewer extends Viewer<Settings> {
 
     @Override
     public void drawElements(GUI gui) {
-        gui.drawText(new Position(5, 5), "Settings", "#FFFFFF");
+        gui.drawText(new Position(5, 5), "Settings", "#FFA212");
 
         for (int i = 0; i < getModel().getNumberEntries(); i++)
             gui.drawText(
                     new Position(5, 7 + i),
                     getModel().getEntry(i),
-                    getModel().isSelected(i) ? "#FFD700" : "#FFFFFF");
+                    getModel().isSelected(i) ? "#FFA212" : "#FFFFFF");
     }
 }

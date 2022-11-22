@@ -1,16 +1,15 @@
-package com.aor.lendea.model.menu;
+package com.aor.lendea.model.help;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class Menu {
+public class Help {
     private final List<String> entries;
     private int currentEntry = 0;
 
-    public Menu() {
-        this.entries = Arrays.asList("Start", "Help", "Settings", "Exit");
+    public Help() {
+        this.entries = Arrays.asList("Go Back");
     }
-
 
     public void nextEntry() {
         currentEntry++;
@@ -31,11 +30,9 @@ public class Menu {
     public boolean isSelected(int i) {
         return currentEntry == i;
     }
-    public boolean isSelectedPlay() {return isSelected(0);}
-    public boolean isSelectedHelp() {return isSelected(1);}
-    public boolean isSelectedSettings() { return isSelected(2);}
-    public boolean isSelectedExit() {
-        return isSelected(3);
+
+    public boolean isSelectedGoBack() {
+        return isSelected(0);
     }
 
     public int getNumberEntries() {

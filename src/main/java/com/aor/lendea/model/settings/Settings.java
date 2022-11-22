@@ -8,7 +8,7 @@ public class Settings {
     private int currentEntry = 0;
 
     public Settings() {
-        this.entries = Arrays.asList("Music", "Volume", "Go Back");
+        this.entries = Arrays.asList("Music", "Go Back");
     }
 
     public void nextEntry() {
@@ -31,14 +31,11 @@ public class Settings {
         return currentEntry == i;
     }
 
-    public boolean isSelectedGoBack() {
-        return isSelected(2);
-    }
-
     public boolean isSelectedMusic() {
         return isSelected(0);
     }
-    public boolean isSelectedVolume() {
+
+    public boolean isSelectedGoBack() {
         return isSelected(1);
     }
 

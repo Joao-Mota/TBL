@@ -3,15 +3,15 @@ package com.aor.lendea.controller.menu;
 import com.aor.lendea.Game;
 import com.aor.lendea.controller.Controller;
 import com.aor.lendea.gui.GUI;
+import com.aor.lendea.model.help.Help;
 import com.aor.lendea.model.menu.Menu;
-import com.aor.lendea.model.settings.Settings;
 import com.aor.lendea.states.MenuState;
 
 import java.io.IOException;
 
-public class SettingsController extends Controller<Settings> {
-    public SettingsController(Settings settings) {
-        super(settings);
+public class HelpController extends Controller<Help> {
+    public HelpController(Help help) {
+        super(help);
     }
 
     @Override
@@ -25,7 +25,6 @@ public class SettingsController extends Controller<Settings> {
                 break;
             case SELECT:
                 if (getModel().isSelectedGoBack()) game.setState(new MenuState(new Menu()));
-                if (getModel().isSelectedMusic()) game.setState(null);
         }
     }
 }

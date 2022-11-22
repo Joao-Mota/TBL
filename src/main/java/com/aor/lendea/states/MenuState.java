@@ -7,8 +7,8 @@ import com.aor.lendea.viewer.Viewer;
 import com.aor.lendea.viewer.menu.MenuViewer;
 
 public class MenuState extends State<Menu> {
-    public MenuState(Menu model) {
-        super(model);
+    public MenuState(Menu menu) {
+        super(menu);
     }
 
     @Override

@@ -4,11 +4,11 @@ import com.aor.lendea.controller.Controller;
 import com.aor.lendea.controller.menu.SettingsController;
 import com.aor.lendea.model.settings.Settings;
 import com.aor.lendea.viewer.Viewer;
-import com.aor.lendea.viewer.menu.SettingsViewer;
+import com.aor.lendea.viewer.settings.SettingsViewer;
 
 public class SettingsState extends State<Settings> {
-    public SettingsState(Settings menu) {
-        super(menu);
+    public SettingsState(Settings settings) {
+        super(settings);
     }
 
     @Override
