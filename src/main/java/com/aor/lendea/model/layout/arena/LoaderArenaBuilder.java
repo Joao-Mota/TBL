@@ -1,5 +1,6 @@
 package com.aor.lendea.model.layout.arena;
 
+import com.aor.lendea.model.layout.elements.Coin;
 import com.aor.lendea.model.layout.elements.Lendea;
 import com.aor.lendea.model.layout.elements.Monster;
 import com.aor.lendea.model.layout.elements.Wall;
@@ -52,7 +53,7 @@ public class LoaderArenaBuilder extends ArenaBuilder {
         for (int y = 0; y < lines.size(); y++) {
             String line = lines.get(y);
             for (int x = 0; x < line.length(); x++)
-                if (line.charAt(x) == '#') walls.add(new Wall(x, y));
+                if (line.charAt(x) == '#' || line.charAt(x) == '|') walls.add(new Wall(x, y));
         }
 
         return walls;
@@ -70,6 +71,20 @@ public class LoaderArenaBuilder extends ArenaBuilder {
 
         return monsters;
     }
+
+    @Override
+    protected List<Coin> createCoins() {
+        List<Coin> coins = new ArrayList<>();
+
+        for (int y = 0; y < lines.size(); y++) {
+            String line = lines.get(y);
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == '$') coins.add(new Coin(x, y));
+        }
+
+        return coins;
+    }
+
 
     @Override
     protected Lendea createLendea() {

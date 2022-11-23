@@ -1,5 +1,6 @@
 package com.aor.lendea.model.layout.arena;
 
+import com.aor.lendea.model.layout.elements.Coin;
 import com.aor.lendea.model.layout.elements.Lendea;
 import com.aor.lendea.model.layout.elements.Monster;
 import com.aor.lendea.model.layout.elements.Wall;
@@ -12,6 +13,7 @@ public abstract class ArenaBuilder {
 
         arena.setLendea(createLendea());
         arena.setMonsters(createMonsters());
+        arena.setCoins(createCoins());
         arena.setWalls(createWalls());
 
         return arena;
@@ -24,6 +26,8 @@ public abstract class ArenaBuilder {
     protected abstract List<Wall> createWalls();
 
     protected abstract List<Monster> createMonsters();
+
+    protected abstract List<Coin> createCoins();
 
     protected abstract Lendea createLendea();
 }

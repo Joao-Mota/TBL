@@ -1,5 +1,6 @@
 package com.aor.lendea.model.layout.arena;
 
+import com.aor.lendea.model.layout.elements.Coin;
 import com.aor.lendea.model.layout.elements.Lendea;
 import com.aor.lendea.model.layout.elements.Monster;
 import com.aor.lendea.model.layout.elements.Wall;
@@ -15,13 +16,15 @@ public class RandomArenaBuilder extends ArenaBuilder {
     private final int width;
     private final int height;
     private final int numberOfMonsters;
+    private final int numberOfCoins;
 
-    public RandomArenaBuilder(int width, int height, int numberOfMonsters) {
+    public RandomArenaBuilder(int width, int height, int numberOfMonsters, int numberOfCoins) {
         this.rng = new Random();
 
         this.width = width;
         this.height = height;
         this.numberOfMonsters = numberOfMonsters;
+        this.numberOfCoins = numberOfCoins;
     }
 
     @Override
@@ -59,6 +62,16 @@ public class RandomArenaBuilder extends ArenaBuilder {
             monsters.add(new MonsterCamelo(rng.nextInt(width - 2) + 1, rng.nextInt(height - 2) + 1));
 
         return monsters;
+    }
+
+    @Override
+    protected List<Coin> createCoins() {
+        List<Coin> coins = new ArrayList<>();
+
+        while (coins.size() < numberOfCoins)
+            coins.add(new Coin(rng.nextInt(width - 2) + 1, rng.nextInt(height - 2) + 1));
+
+        return coins;
     }
 
     @Override
