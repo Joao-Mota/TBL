@@ -1,6 +1,8 @@
 package com.aor.lendea.gui;
 
 import com.aor.lendea.model.Position;
+import com.googlecode.lanterna.SGR;
+import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
@@ -62,7 +64,7 @@ public class LanternaGUI implements GUI {
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         ge.registerFont(font);
 
-        Font loadedFont = font.deriveFont(Font.PLAIN, 30);
+        Font loadedFont = font.deriveFont(Font.PLAIN, 40);
         AWTTerminalFontConfiguration fontConfig = AWTTerminalFontConfiguration.newInstance(loadedFont);
         return fontConfig;
     }
@@ -86,8 +88,11 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawHero(Position position) {
-        drawCharacter(position.getX(), position.getY(), 'L', "#FA1616");
+        drawCharacter(position.getX(), position.getY(), '*', "#FA1616");
     }
+
+    @Override
+    public void drawCoin(Position position) { drawCharacter(position.getX(), position.getY(), '$', "#999933");}
 
     @Override
     public void drawWall(Position position) {

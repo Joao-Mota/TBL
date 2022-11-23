@@ -3,6 +3,8 @@ package com.aor.lendea.model.layout.elements;
 import com.aor.lendea.model.Position;
 
 public class Element {
+
+    public Element(){}
     private Position position;
 
     public Element(int x, int y) {

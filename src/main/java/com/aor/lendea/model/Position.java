@@ -6,6 +6,8 @@ public class Position {
     private final int x;
     private final int y;
 
+
+
     public Position(int x, int y) {
         this.x = x;
         this.y = y;
@@ -31,11 +33,11 @@ public class Position {
         int n = (int) (Math.random() * 4);
         switch (n) {
             case 0:
-                return getUp();
-            case 1:
                 return getRight();
-            case 2:
+            case 1:
                 return getDown();
+            case 2:
+                return getUp();
             default:
                 return getLeft();
         }

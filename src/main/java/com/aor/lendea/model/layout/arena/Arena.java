@@ -1,6 +1,7 @@
 package com.aor.lendea.model.layout.arena;
 
 import com.aor.lendea.model.Position;
+import com.aor.lendea.model.layout.elements.Coin;
 import com.aor.lendea.model.layout.elements.Lendea;
 import com.aor.lendea.model.layout.elements.Monster;
 import com.aor.lendea.model.layout.elements.Wall;
@@ -14,6 +15,7 @@ public class Arena {
     private Lendea lendea;
 
     private List<Monster> monsters;
+    private List<Coin> coins;
     private List<Wall> walls;
 
     public Arena(int width, int height) {
@@ -43,6 +45,9 @@ public class Arena {
         this.monsters = monsters;
     }
 
+    public List<Coin> getCoins() {return coins;}
+    public void setCoins(List<Coin> coins) {this.coins = coins;}
+
     public List<Wall> getWalls() {
         return walls;
     }
@@ -61,6 +66,13 @@ public class Arena {
     public boolean isMonster(Position position) {
         for (Monster monster : monsters)
             if (monster.getPosition().equals(position))
+                return true;
+        return false;
+    }
+
+    public boolean isCoin(Position position) {
+        for (Coin coin : coins)
+            if (coin.getPosition().equals(position))
                 return true;
         return false;
     }

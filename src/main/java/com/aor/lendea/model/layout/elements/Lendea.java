@@ -4,6 +4,7 @@ public class Lendea extends Element {
     private int health;
     private int strike;
     private int defense;
+    private int coins;
 
 
     public Lendea(int x, int y) {
@@ -11,6 +12,7 @@ public class Lendea extends Element {
         this.health = 100;
         this.strike = 10;
         this.defense = 10;
+        this.coins = 0;
     }
 
     public void decreaseHealth() {
@@ -21,6 +23,11 @@ public class Lendea extends Element {
     public int getHealth() {
         return health;
     }
+
+    public void decreaseCoins() {this.coins--;}
+    public void incrementCoins() {this.coins++;}
+
+    public int getCoins() {return coins;}
 
     public void decreaseStrike() {
         this.strike--;
