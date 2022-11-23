@@ -48,6 +48,14 @@ public class Arena {
     public List<Coin> getCoins() {return coins;}
     public void setCoins(List<Coin> coins) {this.coins = coins;}
 
+    public void removeCoin(Coin coin) {
+        for(Coin x : coins) {
+            if(x == coin) {
+                coins.remove(x);
+            }
+        }
+    }
+
     public List<Wall> getWalls() {
         return walls;
     }

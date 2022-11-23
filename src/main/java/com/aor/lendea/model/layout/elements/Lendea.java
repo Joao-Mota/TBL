@@ -9,7 +9,7 @@ public class Lendea extends Element {
 
     public Lendea(int x, int y) {
         super(x, y);
-        this.health = 100;
+        this.health = 3;
         this.strike = 10;
         this.defense = 10;
         this.coins = 0;

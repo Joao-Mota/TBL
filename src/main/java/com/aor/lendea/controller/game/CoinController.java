@@ -29,8 +29,10 @@ public class CoinController extends GameController {
     private void moveCoin(Coin coin, Position position) {
         if (getModel().isEmpty(position)) {
             coin.setPosition(position);
-            if (getModel().getLendea().getPosition().equals(position))
+            if (getModel().getLendea().getPosition().equals(position)) {
                 getModel().getLendea().incrementCoins();
+                getModel().removeCoin(coin);
+            }
         }
     }
 }

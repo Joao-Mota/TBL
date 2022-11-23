@@ -30,7 +30,10 @@ public class HeroController extends GameController {
         if (getModel().isEmpty(position)) {
             getModel().getLendea().setPosition(position);
             if (getModel().isMonster(position)) getModel().getLendea().decreaseHealth();
-            if (getModel().isCoin(position)) getModel().getLendea().incrementCoins();
+            if (getModel().isCoin(position)) {
+                getModel().getLendea().incrementCoins();
+
+            }
         }
     }
 
