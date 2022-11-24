@@ -6,8 +6,6 @@ public class Position {
     private final int x;
     private final int y;
 
-
-
     public Position(int x, int y) {
         this.x = x;
         this.y = y;
@@ -41,6 +39,10 @@ public class Position {
             default:
                 return getLeft();
         }
+    }
+
+    public Position movingShot(float floatX, float speed) {
+        return getLeft();
     }
 
     public int getX() {

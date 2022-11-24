@@ -15,6 +15,7 @@ public class Arena {
     private List<Monster> monsters;
     private ArrayList<Coin> coins;
     private List<Wall> walls;
+    private ArrayList<Shot> shots;
     private Exit exit;
 
     public Arena(int width, int height) {
@@ -56,6 +57,31 @@ public class Arena {
         }
     }
 
+    public void removeMonster(Shot shot) {
+        for(Monster monster : monsters){
+            if(monster.getPosition().equals(shot.getPosition())) {
+                monsters.remove(monster);
+                break;
+            }
+        }
+    }
+
+    public boolean isColliding(Shot shot) {
+        for(Wall wall : walls) {
+            if(wall.getPosition().equals(shot.getPosition())) return true;
+        }
+        for(Monster monster : monsters) {
+            if(monster.getPosition().equals(shot.getPosition())) return true;
+        }
+        return false;
+    }
+
+    public void removeShot(Shot shot) {
+        if(isColliding(shot)) {
+            shots.remove(shot);
+        }
+    }
+
     public List<Wall> getWalls() {
         return walls;
     }
@@ -64,6 +90,27 @@ public class Arena {
         this.walls = walls;
     }
 
+    public ArrayList<Shot> getShots() {return shots;}
+
+    public void setShots(ArrayList<Shot> shots) {this.shots = shots;}
+
+    public void update(Shot shot) {
+        shots.add(shot);
+    }
+/*
+    public void checkCollisions() {
+        List<Shot> collided = new java.util.ArrayList<>();
+        for (Element element : elements) {
+            for (Shot shot : shots) {
+                if (shot.collideWith(element)) {
+                    element.damage();
+                    collided.add(shot);
+                }
+            }
+        }
+        shots.removeAll(collided);
+    }
+*/
     public Exit getExit() {return  exit;}
     public void setExit(Exit exit) {this.exit = exit;}
 

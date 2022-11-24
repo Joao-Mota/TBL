@@ -82,6 +82,18 @@ public class LoaderArenaBuilder extends ArenaBuilder {
         return coins;
     }
 
+    @Override
+    protected ArrayList<Shot> createShots() {
+        ArrayList<Shot> shots = new ArrayList<>();
+
+        for (int y = 0; y < lines.size(); y++) {
+            String line = lines.get(y);
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == '-') shots.add(new LendeaShot(x, y));
+        }
+
+        return shots;
+    }
 
     @Override
     protected Lendea createLendea() {

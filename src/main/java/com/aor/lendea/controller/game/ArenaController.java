@@ -4,24 +4,23 @@ import com.aor.lendea.Game;
 import com.aor.lendea.gui.GUI;
 import com.aor.lendea.model.gameover.GameOver;
 import com.aor.lendea.model.layout.arena.Arena;
-import com.aor.lendea.model.layout.elements.Exit;
-import com.aor.lendea.model.menu.Menu;
 import com.aor.lendea.model.win.Win;
 import com.aor.lendea.states.GameOverState;
-import com.aor.lendea.states.MenuState;
 import com.aor.lendea.states.WinState;
 
 import java.io.IOException;
 
 public class ArenaController extends GameController {
-    private final HeroController heroController;
+    private final LendeaController heroController;
     private final MonsterController monsterController;
+    private final ShotController shotController;
 
     public ArenaController(Arena arena) {
         super(arena);
 
-        this.heroController = new HeroController(arena);
+        this.heroController = new LendeaController(arena);
         this.monsterController = new MonsterController(arena);
+        this.shotController = new ShotController(arena);
     }
 
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
@@ -33,6 +32,7 @@ public class ArenaController extends GameController {
         else {
             heroController.step(game, action, time);
             monsterController.step(game, action, time);
+            shotController.step(game, action, time);
         }
     }
 }

@@ -12,7 +12,10 @@ public interface GUI {
     void drawWall(Position position);
 
     void drawMonster(Position position);
+
     void drawCoin(Position position);
+
+    void drawShot(Position position);
 
     void drawText(Position position, String text, String color);
 
@@ -22,5 +25,5 @@ public interface GUI {
 
     void close() throws IOException;
 
-    enum ACTION {UP, RIGHT, DOWN, LEFT, NONE, QUIT, SELECT}
+    enum ACTION {UP, RIGHT, DOWN, LEFT, NONE, QUIT, SELECT, FIRE}
 }

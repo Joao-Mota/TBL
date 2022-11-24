@@ -14,6 +14,7 @@ public abstract class ArenaBuilder {
         arena.setMonsters(createMonsters());
         arena.setCoins(createCoins());
         arena.setWalls(createWalls());
+        arena.setShots(createShots());
 
         return arena;
     }
@@ -27,6 +28,8 @@ public abstract class ArenaBuilder {
     protected abstract List<Monster> createMonsters();
 
     protected abstract ArrayList<Coin> createCoins();
+
+    protected abstract ArrayList<Shot> createShots();
 
     protected abstract Lendea createLendea();
 
