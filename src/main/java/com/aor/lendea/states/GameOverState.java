@@ -4,7 +4,7 @@ import com.aor.lendea.controller.Controller;
 import com.aor.lendea.controller.menu.GameOverController;
 import com.aor.lendea.model.gameover.GameOver;
 import com.aor.lendea.viewer.Viewer;
-import com.aor.lendea.viewer.gameoverviewer.GameOverViewer;
+import com.aor.lendea.viewer.gameover.GameOverViewer;
 
 public class GameOverState extends State<GameOver> {
     public GameOverState(GameOver gameover) {

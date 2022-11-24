@@ -1,10 +1,7 @@
 package com.aor.lendea.model.layout.arena;
 
 import com.aor.lendea.model.Position;
-import com.aor.lendea.model.layout.elements.Coin;
-import com.aor.lendea.model.layout.elements.Lendea;
-import com.aor.lendea.model.layout.elements.Monster;
-import com.aor.lendea.model.layout.elements.Wall;
+import com.aor.lendea.model.layout.elements.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +10,12 @@ public class Arena {
     private final int width;
     private final int height;
 
+
     private Lendea lendea;
     private List<Monster> monsters;
     private ArrayList<Coin> coins;
     private List<Wall> walls;
+    private Exit exit;
 
     public Arena(int width, int height) {
         this.width = width;
@@ -65,6 +64,9 @@ public class Arena {
         this.walls = walls;
     }
 
+    public Exit getExit() {return  exit;}
+    public void setExit(Exit exit) {this.exit = exit;}
+
     public boolean isEmpty(Position position) {
         for (Wall wall : walls)
             if (wall.getPosition().equals(position))
@@ -76,6 +78,12 @@ public class Arena {
         for (Monster monster : monsters)
             if (monster.getPosition().equals(position))
                 return true;
+        return false;
+    }
+
+    public boolean isExit(Position position) {
+        if (exit.getPosition().equals(position))
+            return true;
         return false;
     }
 

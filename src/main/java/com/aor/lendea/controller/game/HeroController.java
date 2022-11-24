@@ -33,6 +33,9 @@ public class HeroController extends GameController {
             if (getModel().isCoin(position)) {
                 getModel().getLendea().incrementCoins();
             }
+            if (getModel().isExit(position) && getModel().getCoins().size() == 0) {
+                getModel().getLendea().setWin(true);
+            }
         }
         getModel().removeCoin();
     }

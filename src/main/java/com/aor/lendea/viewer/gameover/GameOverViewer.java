@@ -1,4 +1,4 @@
-package com.aor.lendea.viewer.gameoverviewer;
+package com.aor.lendea.viewer.gameover;
 
 import com.aor.lendea.gui.GUI;
 import com.aor.lendea.model.Position;

@@ -1,9 +1,6 @@
 package com.aor.lendea.model.layout.arena;
 
-import com.aor.lendea.model.layout.elements.Coin;
-import com.aor.lendea.model.layout.elements.Lendea;
-import com.aor.lendea.model.layout.elements.Monster;
-import com.aor.lendea.model.layout.elements.Wall;
+import com.aor.lendea.model.layout.elements.*;
 import com.aor.lendea.model.layout.elements.monsters.MonsterCamelo;
 
 import java.io.BufferedReader;
@@ -92,6 +89,16 @@ public class LoaderArenaBuilder extends ArenaBuilder {
             String line = lines.get(y);
             for (int x = 0; x < line.length(); x++)
                 if (line.charAt(x) == 'L') return new Lendea(x, y);
+        }
+        return null;
+    }
+
+    @Override
+    protected Exit createExit() {
+        for (int y = 0; y < lines.size(); y++) {
+            String line = lines.get(y);
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == 'E') return new Exit(x, y);
         }
         return null;
     }

@@ -5,6 +5,7 @@ public class Lendea extends Element {
     private int strike;
     private int defense;
     private int coins;
+    private boolean win;
 
 
     public Lendea(int x, int y) {
@@ -44,4 +45,8 @@ public class Lendea extends Element {
     public int getDefense() {
         return defense;
     }
+
+    public boolean getWin() {return win;}
+
+    public void setWin(boolean win) {this.win = win;}
 }
