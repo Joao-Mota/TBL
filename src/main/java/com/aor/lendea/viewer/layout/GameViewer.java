@@ -20,10 +20,10 @@ public class GameViewer extends Viewer<Arena> {
         drawElements(gui, getModel().getCoins(), new CoinViewer());
         drawElement(gui, getModel().getLendea(), new LendeaViewer());
 
-        gui.drawText(new Position(0, 0), "HP: " + getModel().getLendea().getHealth(), "#FA1616");
-        gui.drawText(new Position(10, 0), "SP: " + getModel().getLendea().getStrike(), "#2AD3FF");
-        gui.drawText(new Position(20, 0), "DP: " + getModel().getLendea().getDefense(), "#75FF7E");
-        gui.drawText(new Position(20, 0), "Coins: " + getModel().getLendea().getCoins(), "#F6C345");
+        gui.drawText(new Position(67, 8), "HP: " + getModel().getLendea().getHealth(), "#FA1616");
+        gui.drawText(new Position(67, 9), "SP: " + getModel().getLendea().getStrike(), "#2AD3FF");
+        gui.drawText(new Position(67, 10), "DP: " + getModel().getLendea().getDefense(), "#75FF7E");
+        gui.drawText(new Position(67, 11), "Coins: " + getModel().getLendea().getCoins(), "#F6C345");
     }
 
     private <T extends Element> void drawElements(GUI gui, List<T> elements, ElementViewer<T> viewer) {

@@ -32,9 +32,9 @@ public class HeroController extends GameController {
             if (getModel().isMonster(position)) getModel().getLendea().decreaseHealth();
             if (getModel().isCoin(position)) {
                 getModel().getLendea().incrementCoins();
-
             }
         }
+        getModel().removeCoin();
     }
 
     @Override

@@ -73,8 +73,8 @@ public class LoaderArenaBuilder extends ArenaBuilder {
     }
 
     @Override
-    protected List<Coin> createCoins() {
-        List<Coin> coins = new ArrayList<>();
+    protected ArrayList<Coin> createCoins() {
+        ArrayList<Coin> coins = new ArrayList<>();
 
         for (int y = 0; y < lines.size(); y++) {
             String line = lines.get(y);

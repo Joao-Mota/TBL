@@ -6,6 +6,7 @@ import com.aor.lendea.model.layout.elements.Lendea;
 import com.aor.lendea.model.layout.elements.Monster;
 import com.aor.lendea.model.layout.elements.Wall;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Arena {
@@ -13,9 +14,8 @@ public class Arena {
     private final int height;
 
     private Lendea lendea;
-
     private List<Monster> monsters;
-    private List<Coin> coins;
+    private ArrayList<Coin> coins;
     private List<Wall> walls;
 
     public Arena(int width, int height) {
@@ -45,13 +45,14 @@ public class Arena {
         this.monsters = monsters;
     }
 
-    public List<Coin> getCoins() {return coins;}
-    public void setCoins(List<Coin> coins) {this.coins = coins;}
+    public ArrayList<Coin> getCoins() {return coins;}
+    public void setCoins(ArrayList<Coin> coins) {this.coins = coins;}
 
-    public void removeCoin(Coin coin) {
-        for(Coin x : coins) {
-            if(x == coin) {
-                coins.remove(x);
+    public void removeCoin() {
+        for(Coin coin : coins){
+            if(getLendea().getPosition().equals(coin.getPosition())) {
+                coins.remove(coin);
+                break;
             }
         }
     }

@@ -5,6 +5,7 @@ import com.aor.lendea.model.layout.elements.Lendea;
 import com.aor.lendea.model.layout.elements.Monster;
 import com.aor.lendea.model.layout.elements.Wall;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class ArenaBuilder {
@@ -27,7 +28,7 @@ public abstract class ArenaBuilder {
 
     protected abstract List<Monster> createMonsters();
 
-    protected abstract List<Coin> createCoins();
+    protected abstract ArrayList<Coin> createCoins();
 
     protected abstract Lendea createLendea();
 }
