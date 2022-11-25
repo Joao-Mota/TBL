@@ -17,6 +17,7 @@ class ArenaViewerTest {
     private GameViewer viewer;
     private Arena arena;
 
+    // Cria um novo ambiente para cada teste
     @BeforeEach
     void setUp() {
         arena = new Arena(10, 10);
@@ -31,7 +32,7 @@ class ArenaViewerTest {
         arena.setShots(Arrays.asList());
     }
 
-
+    // Testa se o ArenaViewer consegue desenhar as Walls
     @Test
     void drawWalls() throws IOException {
         viewer.draw(gui);
@@ -42,6 +43,7 @@ class ArenaViewerTest {
         Mockito.verify(gui, Mockito.times(3)).drawWall(Mockito.any(Position.class));
     }
 
+    // Testa se o ArenaViewer consegue desenhar os Monsters
     @Test
     void drawMonsters() throws IOException {
         viewer.draw(gui);
@@ -51,6 +53,7 @@ class ArenaViewerTest {
         Mockito.verify(gui, Mockito.times(2)).drawMonster(Mockito.any(Position.class));
     }
 
+    // Testa se o ArenaViewer consegue desenhar as Coins
     @Test
     void drawCoins() throws IOException {
         viewer.draw(gui);
@@ -60,14 +63,16 @@ class ArenaViewerTest {
         Mockito.verify(gui, Mockito.times(2)).drawCoin(Mockito.any(Position.class));
     }
 
+    // Testa se o ArenaViewer consegue desenhar o Lendea
     @Test
-    void drawHero() throws IOException {
+    void drawLendea() throws IOException {
         viewer.draw(gui);
 
         Mockito.verify(gui, Mockito.times(1)).drawLendea(new Position(5, 8));
         Mockito.verify(gui, Mockito.times(1)).drawLendea(Mockito.any(Position.class));
     }
 
+    // Testa se o ArenaViewer consegue desenhar a Exit
     @Test
     void refreshAndClear() throws IOException {
         viewer.draw(gui);

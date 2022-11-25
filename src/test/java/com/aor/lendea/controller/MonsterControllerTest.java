@@ -24,6 +24,7 @@ class MonsterControllerTest {
     private Arena arena;
     private Game game;
 
+    // Cria um novo ambiente para cada teste
     @BeforeEach
     void setUp() {
         arena = new Arena(10, 10);
@@ -39,6 +40,7 @@ class MonsterControllerTest {
         game = Mockito.mock(Game.class);
     }
 
+    // Testa se o monstro não está na mesma posicao apos o movimento
     @Test
     void moveMonsters() throws IOException {
         Monster monster = new Monster(5, 5);
@@ -49,6 +51,7 @@ class MonsterControllerTest {
         assertNotEquals(new Position(5, 5), monster.getPosition());
     }
 
+    // Testa se o mostro não passa paredes
     @Test
     void moveMonstersClosed() throws IOException {
         Monster monster = new Monster(5, 5);
@@ -66,6 +69,7 @@ class MonsterControllerTest {
         assertEquals(new Position(5, 5), monster.getPosition());
     }
 
+    // Testa se o mostro passa pelo unico caminho possivel
     @Test
     void moveMonstersGap() throws IOException {
         Monster monster = new Monster(5, 5);

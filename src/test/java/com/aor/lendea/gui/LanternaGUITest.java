@@ -13,6 +13,7 @@ class LanternaGUITest {
     private LanternaGUI gui;
     private TextGraphics tg;
 
+    // Cria um novo ambiente para cada teste
     @BeforeEach
     void setUp() {
         screen = Mockito.mock(Screen.class);
@@ -23,15 +24,16 @@ class LanternaGUITest {
         gui = new LanternaGUI(screen);
     }
 
-
+    // Testa se consegue dar draw a lendea
     @Test
-    void drawHero() {
+    void drawLendea() {
         gui.drawLendea(new Position(1, 1));
 
         Mockito.verify(tg, Mockito.times(1)).setForegroundColor(new TextColor.RGB(24, 212, 47));
         Mockito.verify(tg, Mockito.times(1)).putString(1, 2, "*");
     }
 
+    // Testa se consegue dar draw a texto
     @Test
     void drawText() {
         gui.drawText(new Position(1, 1), "Hello World", "#336699");

@@ -7,11 +7,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-class HeroViewerTest {
+class LendeaViewerTest {
     private Lendea lendea;
     private LendeaViewer viewer;
     private GUI gui;
 
+    // Cria um novo ambiente para cada teste
     @BeforeEach
     void setUp() {
         lendea = new Lendea(10, 10);
@@ -19,6 +20,7 @@ class HeroViewerTest {
         gui = Mockito.mock(GUI.class);
     }
 
+    // Testa se o LendeaViewer consegue desenhar a Lendea
     @Test
     void drawElement() {
         viewer.draw(lendea, gui);
