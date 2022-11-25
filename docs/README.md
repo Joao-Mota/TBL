@@ -22,9 +22,9 @@ Some Screenshots:
 
 Help Screen:
 
-![](media/be2f24c7ca61d7bfd02c04fd0c682d38.png)
 
-Shooting: ![Graphical user interface Description automatically generated](media/78ebd9fb09c41c6b8918cfc4d3c0fd15.png)
+
+Shooting: 
 
 \#\#\# Planned features
 
@@ -40,7 +40,7 @@ Timer – We plan to add a timer so the user may know how long it took to clear 
 
 Multidirectional shooting – We plan to allow the user to shoot in more than one direction
 
-![Timeline Description automatically generated](media/2f701bd6d2efaeebf6ece13f6f4c81f2.png)
+
 
 \#\#\# Design
 
@@ -84,13 +84,13 @@ Win Viewer: [project-l07gr01/WinViewer.java at main · FEUP-LDTS-2022/project-l0
 
 UML Diagram:
 
-![Timeline Description automatically generated](media/3298dbb0e8d86032590d3faa758d9400.png)
+
 
 \#\#\# Testing
 
 Test Coverage Screenshot:
 
-![Graphical user interface Description automatically generated with medium confidence](media/a2d55cbe303f7631b537cdfa30675bce.png)
+
 
 Link to Mutation Testing report:
 
