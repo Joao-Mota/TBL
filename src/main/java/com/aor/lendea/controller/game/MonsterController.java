@@ -27,7 +27,7 @@ public class MonsterController extends GameController {
     }
 
     private void moveMonster(Monster monster, Position position) {
-        if (getModel().isEmpty(position)) {
+        if (getModel().isNotWall(position)) {
             monster.setPosition(position);
             if (getModel().getLendea().getPosition().equals(position))
                 getModel().getLendea().decreaseHealth();

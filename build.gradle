@@ -11,7 +11,7 @@ repositories {
 }
 
 application {
-    mainClass.set("Game")
+    mainClass.set("com.aor.lendea.Game")
 }
 
 dependencies {

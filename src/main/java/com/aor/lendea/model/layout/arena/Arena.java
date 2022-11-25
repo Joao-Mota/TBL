@@ -101,7 +101,7 @@ public class Arena {
     public Exit getExit() {return  exit;}
     public void setExit(Exit exit) {this.exit = exit;}
 
-    public boolean isEmpty(Position position) {
+    public boolean isNotWall(Position position) {
         for (Wall wall : walls)
             if (wall.getPosition().equals(position))
                 return false;

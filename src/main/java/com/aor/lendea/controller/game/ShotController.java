@@ -20,13 +20,13 @@ public class ShotController extends GameController{
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
         if (time - lastMovement > 50) {
             for (Shot shot : getModel().getShots())
-                moveShot(shot, shot.getPosition().movingShot(shot.getFloatX(), shot.getSpeed()));
+                moveShot(shot, shot.getPosition().movingShot());
             this.lastMovement = time;
         }
     }
 
     private void moveShot(Shot shot, Position position) {
-        if (getModel().isEmpty(position)) {
+        if (getModel().isNotWall(position)) {
             shot.setPosition(position);
         }
         getModel().removeMonster(shot);

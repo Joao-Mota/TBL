@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aor.lendea.gui.LanternaGUITest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-11-25T21:01:30" hostname="LAPTOP-MNGO0N6O" time="0.193">
+  <properties/>
+  <testcase name="drawText()" classname="com.aor.lendea.gui.LanternaGUITest" time="0.19"/>
+  <testcase name="drawLendea()" classname="com.aor.lendea.gui.LanternaGUITest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

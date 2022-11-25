@@ -30,7 +30,7 @@ class LanternaGUITest {
         gui.drawLendea(new Position(1, 1));
 
         Mockito.verify(tg, Mockito.times(1)).setForegroundColor(new TextColor.RGB(24, 212, 47));
-        Mockito.verify(tg, Mockito.times(1)).putString(1, 2, "*");
+        Mockito.verify(tg, Mockito.times(1)).putString(1, 1, "*");
     }
 
     // Testa se consegue dar draw a texto

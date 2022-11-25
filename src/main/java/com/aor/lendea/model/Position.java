@@ -41,7 +41,7 @@ public class Position {
         }
     }
 
-    public Position movingShot(float floatX, float speed) {
+    public Position movingShot() {
         return getLeft();
     }
 
