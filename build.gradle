@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'info.solidsoft.pitest' version '1.6.0'
 }
 
 group 'org.example'
@@ -24,4 +25,7 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+pitest {
+    junit5PluginVersion = '0.12'
 }
