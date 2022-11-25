@@ -21,10 +21,10 @@ public class GameViewer extends Viewer<Arena> {
         drawElement(gui, getModel().getLendea(), new LendeaViewer());
         drawElements(gui, getModel().getShots(), new ShotViewer());
 
-        gui.drawText(new Position(67, 8), "HP: " + getModel().getLendea().getHealth(), "#FA1616");
-        gui.drawText(new Position(67, 9), "SP: " + getModel().getLendea().getStrike(), "#2AD3FF");
-        gui.drawText(new Position(67, 10), "DP: " + getModel().getLendea().getDefense(), "#75FF7E");
-        gui.drawText(new Position(67, 11), "Coins: " + getModel().getLendea().getCoins(), "#F6C345");
+        gui.drawText(new Position(67, 13), "HP: " + getModel().getLendea().getHealth(), "#FA1616");
+        //gui.drawText(new Position(67, 14), "SP: " + getModel().getLendea().getStrike(), "#2AD3FF");
+        //gui.drawText(new Position(67, 15), "DP: " + getModel().getLendea().getDefense(), "#75FF7E");
+        gui.drawText(new Position(67, 15), "Coins: " + getModel().getLendea().getCoins(), "#F6C345");
     }
 
     private <T extends Element> void drawElements(GUI gui, List<T> elements, ElementViewer<T> viewer) {

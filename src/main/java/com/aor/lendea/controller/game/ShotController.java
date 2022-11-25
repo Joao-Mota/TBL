@@ -18,7 +18,7 @@ public class ShotController extends GameController{
 
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
-        if (time - lastMovement > 500) {
+        if (time - lastMovement > 50) {
             for (Shot shot : getModel().getShots())
                 moveShot(shot, shot.getPosition().movingShot(shot.getFloatX(), shot.getSpeed()));
             this.lastMovement = time;
