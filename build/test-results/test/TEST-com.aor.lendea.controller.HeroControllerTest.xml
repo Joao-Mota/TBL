@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aor.lendea.controller.HeroControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-11-25T09:44:41" hostname="LAPTOP-MNGO0N6O" time="0.025">
+  <properties/>
+  <testcase name="moveHeroRightEmpty()" classname="com.aor.lendea.controller.HeroControllerTest" time="0.023"/>
+  <testcase name="moveHeroRightNotEmpty()" classname="com.aor.lendea.controller.HeroControllerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

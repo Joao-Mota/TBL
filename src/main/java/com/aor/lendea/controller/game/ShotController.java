@@ -4,7 +4,6 @@ import com.aor.lendea.Game;
 import com.aor.lendea.gui.GUI;
 import com.aor.lendea.model.Position;
 import com.aor.lendea.model.layout.arena.Arena;
-import com.aor.lendea.model.layout.elements.Monster;
 import com.aor.lendea.model.layout.elements.Shot;
 
 import java.io.IOException;

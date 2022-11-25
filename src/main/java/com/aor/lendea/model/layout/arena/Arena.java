@@ -13,9 +13,9 @@ public class Arena {
 
     private Lendea lendea;
     private List<Monster> monsters;
-    private ArrayList<Coin> coins;
+    private List<Coin> coins;
     private List<Wall> walls;
-    private ArrayList<Shot> shots;
+    private List<Shot> shots;
     private Exit exit;
 
     public Arena(int width, int height) {
@@ -45,8 +45,8 @@ public class Arena {
         this.monsters = monsters;
     }
 
-    public ArrayList<Coin> getCoins() {return coins;}
-    public void setCoins(ArrayList<Coin> coins) {this.coins = coins;}
+    public List<Coin> getCoins() {return coins;}
+    public void setCoins(List<Coin> coins) {this.coins = coins;}
 
     public void removeCoin() {
         for(Coin coin : coins){
@@ -90,27 +90,14 @@ public class Arena {
         this.walls = walls;
     }
 
-    public ArrayList<Shot> getShots() {return shots;}
+    public List<Shot> getShots() {return shots;}
 
-    public void setShots(ArrayList<Shot> shots) {this.shots = shots;}
+    public void setShots(List<Shot> shots) {this.shots = shots;}
 
     public void update(Shot shot) {
         shots.add(shot);
     }
-/*
-    public void checkCollisions() {
-        List<Shot> collided = new java.util.ArrayList<>();
-        for (Element element : elements) {
-            for (Shot shot : shots) {
-                if (shot.collideWith(element)) {
-                    element.damage();
-                    collided.add(shot);
-                }
-            }
-        }
-        shots.removeAll(collided);
-    }
-*/
+
     public Exit getExit() {return  exit;}
     public void setExit(Exit exit) {this.exit = exit;}
 

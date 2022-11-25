@@ -6,6 +6,6 @@ import com.aor.lendea.model.layout.elements.Lendea;
 public class LendeaViewer implements ElementViewer<Lendea> {
     @Override
     public void draw(Lendea lendea, GUI gui) {
-        gui.drawHero(lendea.getPosition());
+        gui.drawLendea(lendea.getPosition());
     }
 }

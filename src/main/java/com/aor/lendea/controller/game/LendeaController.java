@@ -5,30 +5,29 @@ import com.aor.lendea.gui.GUI;
 import com.aor.lendea.model.Position;
 import com.aor.lendea.model.layout.arena.Arena;
 import com.aor.lendea.model.layout.elements.LendeaShot;
-import com.aor.lendea.model.layout.elements.Shot;
 
 public class LendeaController extends GameController {
     public LendeaController(Arena arena) {
         super(arena);
     }
 
-    public void moveHeroLeft() {
-        moveHero(getModel().getLendea().getPosition().getLeft());
+    public void moveLendeaLeft() {
+        moveLendea(getModel().getLendea().getPosition().getLeft());
     }
 
-    public void moveHeroRight() {
-        moveHero(getModel().getLendea().getPosition().getRight());
+    public void moveLendeaRight() {
+        moveLendea(getModel().getLendea().getPosition().getRight());
     }
 
-    public void moveHeroUp() {
-        moveHero(getModel().getLendea().getPosition().getUp());
+    public void moveLendeaUp() {
+        moveLendea(getModel().getLendea().getPosition().getUp());
     }
 
-    public void moveHeroDown() {
-        moveHero(getModel().getLendea().getPosition().getDown());
+    public void moveLendeaDown() {
+        moveLendea(getModel().getLendea().getPosition().getDown());
     }
 
-    private void moveHero(Position position) {
+    private void moveLendea(Position position) {
         if (getModel().isEmpty(position)) {
             getModel().getLendea().setPosition(position);
             if (getModel().isMonster(position)) getModel().getLendea().decreaseHealth();
@@ -48,10 +47,10 @@ public class LendeaController extends GameController {
 
     @Override
     public void step(Game game, GUI.ACTION action, long time) {
-        if (action == GUI.ACTION.UP) moveHeroUp();
-        if (action == GUI.ACTION.RIGHT) moveHeroRight();
-        if (action == GUI.ACTION.DOWN) moveHeroDown();
-        if (action == GUI.ACTION.LEFT) moveHeroLeft();
+        if (action == GUI.ACTION.UP) moveLendeaUp();
+        if (action == GUI.ACTION.RIGHT) moveLendeaRight();
+        if (action == GUI.ACTION.DOWN) moveLendeaDown();
+        if (action == GUI.ACTION.LEFT) moveLendeaLeft();
         if (action == GUI.ACTION.FIRE) fire();
     }
 }
