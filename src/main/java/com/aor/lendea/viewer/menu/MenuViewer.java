@@ -12,7 +12,7 @@ public class MenuViewer extends Viewer<Menu> {
 
     @Override
     public void drawElements(GUI gui) {
-        gui.drawText(new Position(31, 3), "Diario de uma Lendea", "#FFA212");
+        gui.drawText(new Position(31, 3), "The Binding of Lendea", "#FFA212");
 
         for (int i = 0; i < getModel().getNumberEntries(); i++) {
             gui.drawText(
