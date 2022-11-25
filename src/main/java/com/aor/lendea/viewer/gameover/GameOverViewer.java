@@ -13,6 +13,8 @@ public class GameOverViewer extends Viewer<GameOver> {
     @Override
     public void drawElements(GUI gui) {
 
+
+        // Game Over Screen Text
         gui.drawText(new Position(4, 1), "  ####                                     ####                            " , "#FFA212");
         gui.drawText(new Position(4, 2), " #######                                  #######                          " , "#FFA212");
         gui.drawText(new Position(4, 3), "####      ######    ##### ###    ###     ###  ###  ##  ###   ###    ####   " , "#FFA212");
@@ -22,6 +24,7 @@ public class GameOverViewer extends Viewer<GameOver> {
         gui.drawText(new Position(4, 7), "##   ##  ## ###    ##  ##  ##  ###       ### ###   ####    ###     ##      " , "#FFA212");
         gui.drawText(new Position(4, 8), "#######  #######  ### ### ###  #####     #######   ####    #####  ###      " , "#FFA212");
         gui.drawText(new Position(4, 9), " #####   ##### ## ### ### ###   ####      ####     ###      ####  ###      " , "#FFA212");
+
 
 
         for (int i = 0; i < getModel().getNumberEntries(); i++)
