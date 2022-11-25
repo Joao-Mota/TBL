@@ -93,7 +93,7 @@ public class LanternaGUI implements GUI {
     public void drawCoin(Position position) { drawCharacter(position.getX(), position.getY(), '$', "#999933");}
 
     @Override
-    public void drawShot(Position position) { drawCharacter(position.getX(), position.getY(), '-', "#999933");}
+    public void drawShot(Position position) { drawCharacter(position.getX(), position.getY(), 'o', "#999933");}
 
     @Override
     public void drawWall(Position position) {
