@@ -18,12 +18,12 @@ public class ShotController extends GameController{
 
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
-        if (time - lastMovement > 50) {
+        if (time - lastMovement > 100) {
             for (Shot shot : getModel().getShots()) {
-                if(shot.getDirectionUp()) {moveShot(shot, shot.getPosition().movingShotUp());}
-                if(shot.getDirectionRight()) {moveShot(shot, shot.getPosition().movingShotRight());}
-                if(shot.getDirectionDown()) {moveShot(shot, shot.getPosition().movingShotDown());}
-                if(shot.getDirectionLeft()) {moveShot(shot, shot.getPosition().movingShotLeft());}
+                if(shot.getDirectionUp()) {moveShot(shot, shot.getPosition().movingShotUp()); break;}
+                if(shot.getDirectionRight()) {moveShot(shot, shot.getPosition().movingShotRight()); break;}
+                if(shot.getDirectionDown()) {moveShot(shot, shot.getPosition().movingShotDown()); break;}
+                if(shot.getDirectionLeft()) {moveShot(shot, shot.getPosition().movingShotLeft()); break;}
                 this.lastMovement = time;
             }
         }
@@ -34,6 +34,8 @@ public class ShotController extends GameController{
             shot.setPosition(position);
         }
         getModel().removeMonster(shot);
-        getModel().removeShot(shot);
+        if(!getModel().isNotWall(position)) {
+            getModel().removeShot(shot);
+        }
     }
 }

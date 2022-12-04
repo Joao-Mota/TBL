@@ -7,8 +7,10 @@ import com.aor.lendea.model.layout.arena.Arena;
 import com.aor.lendea.model.layout.elements.LendeaShot;
 
 public class LendeaController extends GameController {
+    private long lastMovement;
     public LendeaController(Arena arena) {
         super(arena);
+        this.lastMovement = 0;
     }
 
     public void moveLendeaLeft() {
@@ -60,9 +62,12 @@ public class LendeaController extends GameController {
         if (action == GUI.ACTION.RIGHT) moveLendeaRight();
         if (action == GUI.ACTION.DOWN) moveLendeaDown();
         if (action == GUI.ACTION.LEFT) moveLendeaLeft();
-        if (action == GUI.ACTION.FIRE_UP) fireUP();
-        if (action == GUI.ACTION.FIRE_RIGHT) fireRight();
-        if (action == GUI.ACTION.FIRE_DOWN) fireDown();
-        if (action == GUI.ACTION.FIRE_LEFT) fireLeft();
+        if (time - lastMovement > 10) {
+            if (action == GUI.ACTION.FIRE_UP) fireUP();
+            if (action == GUI.ACTION.FIRE_RIGHT) fireRight();
+            if (action == GUI.ACTION.FIRE_DOWN) fireDown();
+            if (action == GUI.ACTION.FIRE_LEFT) fireLeft();
+            this.lastMovement = time;
+        }
     }
 }

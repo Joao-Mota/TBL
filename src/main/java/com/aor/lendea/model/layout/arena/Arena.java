@@ -66,21 +66,10 @@ public class Arena {
         }
     }
 
-    public boolean isColliding(Shot shot) {
-        for(Wall wall : walls) {
-            if(wall.getPosition().equals(shot.getPosition())) return true;
-        }
-        for(Monster monster : monsters) {
-            if(monster.getPosition().equals(shot.getPosition())) return true;
-        }
-        return false;
+    public void removeShot(Shot shot) {
+        shots.remove(shot);
     }
 
-    public void removeShot(Shot shot) {
-        if(isColliding(shot)) {
-            shots.remove(shot);
-        }
-    }
 
     public List<Wall> getWalls() {
         return walls;
@@ -106,6 +95,13 @@ public class Arena {
             if (wall.getPosition().equals(position))
                 return false;
         return true;
+    }
+
+    public boolean isShot(Position position) {
+        for (Shot shot : shots)
+            if (shot.getPosition().equals(position))
+                return true;
+        return false;
     }
 
     public boolean isMonster(Position position) {
