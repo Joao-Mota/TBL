@@ -11,14 +11,14 @@ import pt.up.fe.lendea.states.WinState;
 import java.io.IOException;
 
 public class ArenaController extends GameController {
-    private final LendeaController heroController;
+    private final LendeaController lendeaController;
     private final MonsterController monsterController;
     private final ShotController shotController;
 
     public ArenaController(Arena arena) {
         super(arena);
 
-        this.heroController = new LendeaController(arena);
+        this.lendeaController = new LendeaController(arena);
         this.monsterController = new MonsterController(arena);
         this.shotController = new ShotController(arena);
     }
@@ -30,7 +30,7 @@ public class ArenaController extends GameController {
             game.setState(new WinState(new Win()));
         }
         else {
-            heroController.step(game, action, time);
+            lendeaController.step(game, action, time);
             monsterController.step(game, action, time);
             shotController.step(game, action, time);
         }
