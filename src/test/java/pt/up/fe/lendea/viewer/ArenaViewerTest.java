@@ -3,7 +3,6 @@ package pt.up.fe.lendea.viewer;
 import pt.up.fe.lendea.gui.GUI;
 import pt.up.fe.lendea.model.Position;
 import pt.up.fe.lendea.model.layout.arena.Arena;
-import com.aor.lendea.model.layout.elements.*;
 import pt.up.fe.lendea.viewer.layout.GameViewer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
