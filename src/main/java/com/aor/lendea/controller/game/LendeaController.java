@@ -41,8 +41,17 @@ public class LendeaController extends GameController {
         getModel().removeCoin();
     }
 
-    private void fire() {
-        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX() - 1, getModel().getLendea().getPosition().getY()));
+    private void fireUP() {
+        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX(), getModel().getLendea().getPosition().getY() - 1, true, false, false, false));
+    }
+    private void fireRight() {
+        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX() + 1, getModel().getLendea().getPosition().getY(), false, true, false, false));
+    }
+    private void fireDown() {
+        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX(), getModel().getLendea().getPosition().getY() + 1, false, false, true, false));
+    }
+    private void fireLeft() {
+        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX() - 1, getModel().getLendea().getPosition().getY(), false, false, false, true));
     }
 
     @Override
@@ -51,6 +60,9 @@ public class LendeaController extends GameController {
         if (action == GUI.ACTION.RIGHT) moveLendeaRight();
         if (action == GUI.ACTION.DOWN) moveLendeaDown();
         if (action == GUI.ACTION.LEFT) moveLendeaLeft();
-        if (action == GUI.ACTION.FIRE) fire();
+        if (action == GUI.ACTION.FIRE_UP) fireUP();
+        if (action == GUI.ACTION.FIRE_RIGHT) fireRight();
+        if (action == GUI.ACTION.FIRE_DOWN) fireDown();
+        if (action == GUI.ACTION.FIRE_LEFT) fireLeft();
     }
 }

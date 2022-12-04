@@ -19,9 +19,13 @@ public class ShotController extends GameController{
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
         if (time - lastMovement > 50) {
-            for (Shot shot : getModel().getShots())
-                moveShot(shot, shot.getPosition().movingShot());
-            this.lastMovement = time;
+            for (Shot shot : getModel().getShots()) {
+                if(shot.getDirectionUp()) {moveShot(shot, shot.getPosition().movingShotUp());}
+                if(shot.getDirectionRight()) {moveShot(shot, shot.getPosition().movingShotRight());}
+                if(shot.getDirectionDown()) {moveShot(shot, shot.getPosition().movingShotDown());}
+                if(shot.getDirectionLeft()) {moveShot(shot, shot.getPosition().movingShotLeft());}
+                this.lastMovement = time;
+            }
         }
     }
 

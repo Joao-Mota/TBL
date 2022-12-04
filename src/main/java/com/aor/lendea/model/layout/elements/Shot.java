@@ -4,25 +4,22 @@ package com.aor.lendea.model.layout.elements;
 public class Shot extends Element {
 
     float floatX;
+    boolean up;
+    boolean right;
+    boolean down;
+    boolean left;
 
-    private float speed;
-
-    private boolean direction;
-
-    private char character;
-
-    static public boolean up = true;
-    static public boolean down = false;
-    public Shot(int x, int y, float speed, boolean direction, char character) {
+    public Shot(int x, int y, boolean up, boolean right, boolean down, boolean left) {
         super(x,y);
         this.floatX = x;
-        this.speed = speed;
-        this.direction = direction;
-        this.character = character;
+        this.up = up;
+        this.right = right;
+        this.down = down;
+        this.left = left;
     }
 
-    public float getSpeed() {return speed;}
-
-    public float getFloatX() {return floatX;}
-
+    public boolean getDirectionUp() {return this.up;}
+    public boolean getDirectionRight() {return this.right;}
+    public boolean getDirectionDown() {return this.down;}
+    public boolean getDirectionLeft() {return this.left;}
 }

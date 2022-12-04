@@ -72,12 +72,15 @@ public class LanternaGUI implements GUI {
         if (keyStroke.getKeyType() == KeyType.EOF) return ACTION.QUIT;
         if (keyStroke.getKeyType() == KeyType.Character && keyStroke.getCharacter() == 'q') return ACTION.QUIT;
 
-        if (keyStroke.getKeyType() == KeyType.ArrowUp || keyStroke.getKeyType() == KeyType.Character && keyStroke.getCharacter() == 'w') return ACTION.UP;
-        if (keyStroke.getKeyType() == KeyType.ArrowRight || keyStroke.getKeyType() == KeyType.Character && keyStroke.getCharacter() == 'd') return ACTION.RIGHT;
-        if (keyStroke.getKeyType() == KeyType.ArrowDown || keyStroke.getKeyType() == KeyType.Character && keyStroke.getCharacter() == 's') return ACTION.DOWN;
-        if (keyStroke.getKeyType() == KeyType.ArrowLeft || keyStroke.getKeyType() == KeyType.Character && keyStroke.getCharacter() == 'a') return ACTION.LEFT;
+        if (keyStroke.getKeyType() == KeyType.Character && keyStroke.getCharacter() == 'w') return ACTION.UP;
+        if (keyStroke.getKeyType() == KeyType.Character && keyStroke.getCharacter() == 'd') return ACTION.RIGHT;
+        if (keyStroke.getKeyType() == KeyType.Character && keyStroke.getCharacter() == 's') return ACTION.DOWN;
+        if (keyStroke.getKeyType() == KeyType.Character && keyStroke.getCharacter() == 'a') return ACTION.LEFT;
 
-        if (keyStroke.getKeyType() == KeyType.Character && keyStroke.getCharacter() == ' ') return ACTION.FIRE;
+        if (keyStroke.getKeyType() == KeyType.ArrowUp) return ACTION.FIRE_UP;
+        if (keyStroke.getKeyType() == KeyType.ArrowRight) return ACTION.FIRE_RIGHT;
+        if (keyStroke.getKeyType() == KeyType.ArrowDown) return ACTION.FIRE_DOWN;
+        if (keyStroke.getKeyType() == KeyType.ArrowLeft) return ACTION.FIRE_LEFT;
 
         if (keyStroke.getKeyType() == KeyType.Enter) return ACTION.SELECT;
 

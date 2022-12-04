@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.aor.lendea.controller.LendeaControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-11-25T21:01:30" hostname="LAPTOP-MNGO0N6O" time="0.025">
+<testsuite name="com.aor.lendea.controller.LendeaControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-12-04T10:17:24" hostname="LAPTOP-MNGO0N6O" time="0.028">
   <properties/>
-  <testcase name="moveLendeaRightNotEmpty()" classname="com.aor.lendea.controller.LendeaControllerTest" time="0.022"/>
+  <testcase name="moveLendeaRightNotEmpty()" classname="com.aor.lendea.controller.LendeaControllerTest" time="0.021"/>
   <testcase name="moveLendeaUpEmpty()" classname="com.aor.lendea.controller.LendeaControllerTest" time="0.001"/>
   <testcase name="moveLendeaDownEmpty()" classname="com.aor.lendea.controller.LendeaControllerTest" time="0.001"/>
   <testcase name="moveLendeaRightEmpty()" classname="com.aor.lendea.controller.LendeaControllerTest" time="0.001"/>

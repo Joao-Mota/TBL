@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.aor.lendea.model.PositionTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-11-25T21:01:29" hostname="LAPTOP-MNGO0N6O" time="0.765">
+<testsuite name="com.aor.lendea.model.PositionTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-12-04T10:17:23" hostname="LAPTOP-MNGO0N6O" time="0.66">
   <properties/>
-  <testcase name="getDown" classname="com.aor.lendea.model.PositionTest" time="0.395"/>
-  <testcase name="getLeft" classname="com.aor.lendea.model.PositionTest" time="0.25"/>
-  <testcase name="getUp" classname="com.aor.lendea.model.PositionTest" time="0.058"/>
-  <testcase name="getRight" classname="com.aor.lendea.model.PositionTest" time="0.06"/>
-  <system-out><![CDATA[timestamp = 2022-11-25T21:01:29.697599200, PositionTest:getDown = 
+  <testcase name="getDown" classname="com.aor.lendea.model.PositionTest" time="0.376"/>
+  <testcase name="getLeft" classname="com.aor.lendea.model.PositionTest" time="0.136"/>
+  <testcase name="getUp" classname="com.aor.lendea.model.PositionTest" time="0.083"/>
+  <testcase name="getRight" classname="com.aor.lendea.model.PositionTest" time="0.063"/>
+  <system-out><![CDATA[timestamp = 2022-12-04T10:17:24.241495400, PositionTest:getDown = 
                               |--------------------jqwik--------------------
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
@@ -14,11 +14,11 @@ after-failure = PREVIOUS_SEED | use the previous seed
 when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 81         | # of all combined edge cases
-edge-cases#tried = 76         | # of edge cases tried in current run
-seed = -5424222837845154415   | random seed to reproduce generated values
+edge-cases#tried = 77         | # of edge cases tried in current run
+seed = -1659352277815833653   | random seed to reproduce generated values
 
 
-timestamp = 2022-11-25T21:01:29.956905900, PositionTest:getLeft = 
+timestamp = 2022-12-04T10:17:24.388744200, PositionTest:getLeft = 
                               |--------------------jqwik--------------------
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
@@ -28,10 +28,10 @@ when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 81         | # of all combined edge cases
 edge-cases#tried = 73         | # of edge cases tried in current run
-seed = -8804378848271442400   | random seed to reproduce generated values
+seed = -5456269048076274058   | random seed to reproduce generated values
 
 
-timestamp = 2022-11-25T21:01:30.018740700, PositionTest:getUp = 
+timestamp = 2022-12-04T10:17:24.475033, PositionTest:getUp = 
                               |--------------------jqwik--------------------
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
@@ -40,11 +40,11 @@ after-failure = PREVIOUS_SEED | use the previous seed
 when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 81         | # of all combined edge cases
-edge-cases#tried = 69         | # of edge cases tried in current run
-seed = -2913793118138024724   | random seed to reproduce generated values
+edge-cases#tried = 67         | # of edge cases tried in current run
+seed = -5164202726096264606   | random seed to reproduce generated values
 
 
-timestamp = 2022-11-25T21:01:30.078189200, PositionTest:getRight = 
+timestamp = 2022-12-04T10:17:24.536867800, PositionTest:getRight = 
                               |--------------------jqwik--------------------
 tries = 1000                  | # of calls to property
 checks = 1000                 | # of not rejected calls
@@ -53,8 +53,8 @@ after-failure = PREVIOUS_SEED | use the previous seed
 when-fixed-seed = ALLOW       | fixing the random seed is allowed
 edge-cases#mode = MIXIN       | edge cases are mixed in
 edge-cases#total = 81         | # of all combined edge cases
-edge-cases#tried = 81         | # of edge cases tried in current run
-seed = 5181846690052518786    | random seed to reproduce generated values
+edge-cases#tried = 73         | # of edge cases tried in current run
+seed = -6571988149538311867   | random seed to reproduce generated values
 
 
 ]]></system-out>

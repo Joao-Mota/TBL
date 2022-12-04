@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.aor.lendea.controller.MonsterControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-11-25T21:01:30" hostname="LAPTOP-MNGO0N6O" time="0.559">
+<testsuite name="com.aor.lendea.controller.MonsterControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-04T10:17:24" hostname="LAPTOP-MNGO0N6O" time="0.673">
   <properties/>
-  <testcase name="moveMonsters()" classname="com.aor.lendea.controller.MonsterControllerTest" time="0.556"/>
+  <testcase name="moveMonsters()" classname="com.aor.lendea.controller.MonsterControllerTest" time="0.67"/>
   <testcase name="moveMonstersGap()" classname="com.aor.lendea.controller.MonsterControllerTest" time="0.001"/>
-  <testcase name="moveMonstersClosed()" classname="com.aor.lendea.controller.MonsterControllerTest" time="0.001"/>
+  <testcase name="moveMonstersClosed()" classname="com.aor.lendea.controller.MonsterControllerTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

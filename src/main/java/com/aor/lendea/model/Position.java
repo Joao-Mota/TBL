@@ -41,7 +41,16 @@ public class Position {
         }
     }
 
-    public Position movingShot() {
+    public Position movingShotUp() {
+        return getUp();
+    }
+    public Position movingShotRight() {
+        return getRight();
+    }
+    public Position movingShotDown() {
+        return getDown();
+    }
+    public Position movingShotLeft() {
         return getLeft();
     }
 
