@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 public class Game {
-
     private final LanternaGUI gui;
     private State state;
 
@@ -30,6 +29,7 @@ public class Game {
     private void start() throws IOException {
         int FPS = 120;
         int frameTime = 1000 / FPS;
+        //state.playMusic();
 
         while (this.state != null) {
             long startTime = System.currentTimeMillis();

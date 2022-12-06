@@ -17,6 +17,7 @@ public abstract class ArenaBuilder {
         arena.setWalls(createWalls());
         arena.setShots(createShots());
         arena.setBosses(createBosses());
+        arena.setBossShots(createShots());
 
         return arena;
     }

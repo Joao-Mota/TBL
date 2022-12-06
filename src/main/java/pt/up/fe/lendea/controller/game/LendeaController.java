@@ -33,6 +33,8 @@ public class LendeaController extends GameController {
         if (getModel().isNotWall(position)) {
             getModel().getLendea().setPosition(position);
             if (getModel().isMonster(position)) getModel().getLendea().decreaseHealth();
+            if (getModel().isBoss(position)) getModel().getLendea().decreaseHealth();
+
             if (getModel().isCoin(position)) {
                 getModel().getLendea().incrementCoins();
             }

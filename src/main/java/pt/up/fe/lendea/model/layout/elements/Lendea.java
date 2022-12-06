@@ -30,22 +30,6 @@ public class Lendea extends Element {
 
     public int getCoins() {return coins;}
 
-    public void decreaseStrike() {
-        this.strike--;
-    }
-    public void incrementStrike() {this.strike++;}
-
-    public int getStrike() {return strike;}
-
-    public void decreaseDefense() {
-        this.defense--;
-    }
-    public void incrementDefense() {this.defense++;}
-
-    public int getDefense() {
-        return defense;
-    }
-
     public boolean getWin() {return win;}
 
     public void setWin(boolean win) {this.win = win;}

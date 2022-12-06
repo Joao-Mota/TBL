@@ -33,6 +33,20 @@ public class ShotController extends GameController{
                 if(flag) {flag = false; break;}
             }
         }
+        for (Shot shot : getModel().getBossShots()) {
+            if(shot.getDirectionUp()) {moveBossShot(shot, shot.getPosition().movingShotUp());
+                if(flag) {flag = false; break;}
+            }
+            if(shot.getDirectionRight()) {moveBossShot(shot, shot.getPosition().movingShotRight());
+                if(flag) {flag = false; break;}
+            }
+            if(shot.getDirectionDown()) {moveBossShot(shot, shot.getPosition().movingShotDown());
+                if(flag) {flag = false; break;}
+            }
+            if(shot.getDirectionLeft()) {moveBossShot(shot, shot.getPosition().movingShotLeft());
+                if(flag) {flag = false; break;}
+            }
+        }
     }
 
     private void moveShot(Shot shot, Position position) {
@@ -42,6 +56,17 @@ public class ShotController extends GameController{
         getModel().removeMonster(shot);
         if(!getModel().isNotWall(position)) {
             getModel().removeShot(shot);
+            flag = true;
+        }
+    }
+
+    private void moveBossShot(Shot shot, Position position) {
+        if (getModel().isNotWall(position)) {
+            shot.setPosition(position);
+        }
+        if (shot.getPosition().equals(getModel().getLendea().getPosition())) getModel().getLendea().decreaseHealth();
+        if (!getModel().isNotWall(position)) {
+            getModel().removeBossShot(shot);
             flag = true;
         }
     }

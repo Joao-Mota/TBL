@@ -20,10 +20,10 @@ public class BossController extends GameController {
 
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
-        if (time - lastMovement > 800) {
+        if (time - lastMovement > 1000) {
             for (Boss boss : getModel().getBosses()) {
-                moveBoss(boss, boss.getPosition().getRandomNeighbour());
-                fire();
+                moveBoss(boss, boss.getPosition().moveSide());
+                fire(boss);
             }
             this.lastMovement = time;
         }
@@ -37,9 +37,7 @@ public class BossController extends GameController {
         }
     }
 
-    private void fire() {
-        for(Boss boss : getModel().getBosses()) {
-            getModel().update(new BossShot(boss.getPosition().getX(), boss.getPosition().getY() + 1, false, false, true, false));
-        }
+    private void fire(Boss boss) {
+            getModel().updateBoss(new BossShot(boss.getPosition().getX(), boss.getPosition().getY() + 1, false, false, true, false));
     }
 }

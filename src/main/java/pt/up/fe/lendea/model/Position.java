@@ -1,5 +1,6 @@
 package pt.up.fe.lendea.model;
 
+import javax.sql.ConnectionPoolDataSource;
 import java.util.Objects;
 
 public class Position {
@@ -36,6 +37,16 @@ public class Position {
                 return getDown();
             case 2:
                 return getUp();
+            default:
+                return getLeft();
+        }
+    }
+
+    public Position moveSide() {
+        int n = (int) (Math.random() * 2);
+        switch (n) {
+            case 0:
+                return getRight();
             default:
                 return getLeft();
         }

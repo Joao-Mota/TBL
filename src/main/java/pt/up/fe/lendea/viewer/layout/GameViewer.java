@@ -20,6 +20,7 @@ public class GameViewer extends Viewer<Arena> {
         drawElements(gui, getModel().getCoins(), new CoinViewer());
         drawElement(gui, getModel().getLendea(), new LendeaViewer());
         drawElements(gui, getModel().getShots(), new ShotViewer());
+        drawElements(gui, getModel().getBossShots(), new BossShotViewer());
         drawElements(gui, getModel().getBosses(), new BossViewer());
 
         gui.drawText(new Position(67, 13), "HP: " + getModel().getLendea().getHealth(), "#FA1616");

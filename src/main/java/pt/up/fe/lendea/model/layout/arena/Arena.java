@@ -16,6 +16,7 @@ public class Arena {
     private List<Coin> coins;
     private List<Wall> walls;
     private List<Shot> shots;
+    private List<Shot> BossShots;
     private List<Boss> bosses;
     private Exit exit;
 
@@ -74,6 +75,9 @@ public class Arena {
         shots.remove(shot);
     }
 
+    public void removeBossShot(Shot shot) {
+        BossShots.remove(shot);
+    }
 
     public List<Wall> getWalls() {
         return walls;
@@ -89,6 +93,14 @@ public class Arena {
 
     public void update(Shot shot) {
         shots.add(shot);
+    }
+
+    public List<Shot> getBossShots() {return BossShots;}
+
+    public void setBossShots(List<Shot> BossShots) {this.BossShots = BossShots;}
+
+    public void updateBoss(Shot shot) {
+        BossShots.add(shot);
     }
 
     public Exit getExit() {return  exit;}
@@ -111,6 +123,13 @@ public class Arena {
     public boolean isMonster(Position position) {
         for (Monster monster : monsters)
             if (monster.getPosition().equals(position))
+                return true;
+        return false;
+    }
+
+    public boolean isBoss(Position position) {
+        for (Boss boss : bosses)
+            if (boss.getPosition().equals(position))
                 return true;
         return false;
     }
