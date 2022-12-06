@@ -36,7 +36,7 @@ public class LendeaController extends GameController {
             if (getModel().isCoin(position)) {
                 getModel().getLendea().incrementCoins();
             }
-            if (getModel().isExit(position) && getModel().getCoins().size() == 0) {
+            if (getModel().isExit(position) && getModel().getMonsters().size() == 0) {
                 getModel().getLendea().setWin(true);
             }
         }
@@ -62,7 +62,7 @@ public class LendeaController extends GameController {
         if (action == GUI.ACTION.RIGHT) moveLendeaRight();
         if (action == GUI.ACTION.DOWN) moveLendeaDown();
         if (action == GUI.ACTION.LEFT) moveLendeaLeft();
-        if (time - lastMovement > 10) {
+        if (time - lastMovement > 25) {
             if (action == GUI.ACTION.FIRE_UP) fireUP();
             if (action == GUI.ACTION.FIRE_RIGHT) fireRight();
             if (action == GUI.ACTION.FIRE_DOWN) fireDown();

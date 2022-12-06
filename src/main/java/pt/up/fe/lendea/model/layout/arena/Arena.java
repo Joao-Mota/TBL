@@ -2,6 +2,7 @@ package pt.up.fe.lendea.model.layout.arena;
 
 import pt.up.fe.lendea.model.Position;
 import pt.up.fe.lendea.model.layout.elements.*;
+import pt.up.fe.lendea.model.layout.elements.monsters.*;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class Arena {
     private List<Coin> coins;
     private List<Wall> walls;
     private List<Shot> shots;
+    private List<Boss> bosses;
     private Exit exit;
 
     public Arena(int width, int height) {
@@ -43,6 +45,9 @@ public class Arena {
     public void setMonsters(List<Monster> monsters) {
         this.monsters = monsters;
     }
+
+    public List<Boss> getBosses() {return bosses;}
+    public void setBosses(List<Boss> bosses) {this.bosses = bosses;}
 
     public List<Coin> getCoins() {return coins;}
     public void setCoins(List<Coin> coins) {this.coins = coins;}

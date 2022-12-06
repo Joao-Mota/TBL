@@ -1,7 +1,7 @@
 package pt.up.fe.lendea.model.layout.arena;
 
 import pt.up.fe.lendea.model.layout.elements.*;
-import pt.up.fe.lendea.model.layout.elements.monsters.Monster1;
+import pt.up.fe.lendea.model.layout.elements.monsters.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -67,6 +67,19 @@ public class LoaderArenaBuilder extends ArenaBuilder {
         }
 
         return monsters;
+    }
+
+    @Override
+    protected List<Boss> createBosses() {
+        List<Boss> bosses = new ArrayList<>();
+
+        for (int y = 0; y < lines.size(); y++) {
+            String line = lines.get(y);
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == 'B') bosses.add(new Boss(x, y));
+        }
+
+        return bosses;
     }
 
     @Override

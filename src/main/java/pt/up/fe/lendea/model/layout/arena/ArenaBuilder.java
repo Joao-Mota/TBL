@@ -1,6 +1,7 @@
 package pt.up.fe.lendea.model.layout.arena;
 
 import pt.up.fe.lendea.model.layout.elements.*;
+import pt.up.fe.lendea.model.layout.elements.monsters.Boss;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ public abstract class ArenaBuilder {
         arena.setCoins(createCoins());
         arena.setWalls(createWalls());
         arena.setShots(createShots());
+        arena.setBosses(createBosses());
 
         return arena;
     }
@@ -34,4 +36,6 @@ public abstract class ArenaBuilder {
     protected abstract Lendea createLendea();
 
     protected abstract Exit createExit();
+
+    protected abstract List<Boss> createBosses();
 }

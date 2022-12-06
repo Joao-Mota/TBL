@@ -17,6 +17,8 @@ public interface GUI {
 
     void drawShot(Position position);
 
+    void drawBoss(Position position);
+
     void drawText(Position position, String text, String color);
 
     void clear();

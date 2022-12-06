@@ -13,6 +13,7 @@ import java.io.IOException;
 public class ArenaController extends GameController {
     private final LendeaController lendeaController;
     private final MonsterController monsterController;
+    private final BossController bossController;
     private final ShotController shotController;
 
     public ArenaController(Arena arena) {
@@ -20,6 +21,7 @@ public class ArenaController extends GameController {
 
         this.lendeaController = new LendeaController(arena);
         this.monsterController = new MonsterController(arena);
+        this.bossController = new BossController(arena);
         this.shotController = new ShotController(arena);
     }
 
@@ -32,6 +34,7 @@ public class ArenaController extends GameController {
         else {
             lendeaController.step(game, action, time);
             monsterController.step(game, action, time);
+            bossController.step(game, action, time);
             shotController.step(game, action, time);
         }
     }
