@@ -10,7 +10,6 @@ public class Arena {
     private final int width;
     private final int height;
 
-
     private Lendea lendea;
     private List<Monster> monsters;
     private List<Coin> coins;
@@ -48,6 +47,7 @@ public class Arena {
     }
 
     public List<Boss> getBosses() {return bosses;}
+
     public void setBosses(List<Boss> bosses) {this.bosses = bosses;}
 
     public List<Coin> getCoins() {return coins;}
@@ -79,6 +79,8 @@ public class Arena {
         BossShots.remove(shot);
     }
 
+    public void removeBoss(Boss boss) {bosses.remove(boss);}
+
     public List<Wall> getWalls() {
         return walls;
     }
@@ -106,18 +108,18 @@ public class Arena {
     public Exit getExit() {return  exit;}
     public void setExit(Exit exit) {this.exit = exit;}
 
+    public void decreaseBossHealth(Position position) {
+        for(Boss boss : bosses) {
+            if(boss.getPosition().equals(position))
+                boss.decreaseHealth();
+        }
+    }
+
     public boolean isNotWall(Position position) {
         for (Wall wall : walls)
             if (wall.getPosition().equals(position))
                 return false;
         return true;
-    }
-
-    public boolean isShot(Position position) {
-        for (Shot shot : shots)
-            if (shot.getPosition().equals(position))
-                return true;
-        return false;
     }
 
     public boolean isMonster(Position position) {

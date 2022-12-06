@@ -8,7 +8,7 @@ public class Boss extends Monster {
 
     public Boss(int x, int y) {
         super(x, y);
-        this.health = 5;
+        this.health = 2;
     }
 
     public int getHealth() {return this.health;}

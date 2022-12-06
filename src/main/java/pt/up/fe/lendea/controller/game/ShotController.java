@@ -52,6 +52,9 @@ public class ShotController extends GameController{
     private void moveShot(Shot shot, Position position) {
         if (getModel().isNotWall(position)) {
             shot.setPosition(position);
+            if (getModel().isBoss(position)) {
+                getModel().decreaseBossHealth(position);
+            }
         }
         getModel().removeMonster(shot);
         if(!getModel().isNotWall(position)) {
@@ -63,8 +66,12 @@ public class ShotController extends GameController{
     private void moveBossShot(Shot shot, Position position) {
         if (getModel().isNotWall(position)) {
             shot.setPosition(position);
+            if (shot.getPosition().equals(getModel().getLendea().getPosition())) {
+                getModel().getLendea().decreaseHealth();
+                getModel().removeBossShot(shot);
+                flag = true;
+            }
         }
-        if (shot.getPosition().equals(getModel().getLendea().getPosition())) getModel().getLendea().decreaseHealth();
         if (!getModel().isNotWall(position)) {
             getModel().removeBossShot(shot);
             flag = true;

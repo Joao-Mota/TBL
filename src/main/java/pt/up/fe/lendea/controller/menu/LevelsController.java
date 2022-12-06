@@ -26,10 +26,18 @@ public class LevelsController extends Controller<Levels> {
                 getModel().nextEntry();
                 break;
             case SELECT:
-                if (getModel().isSelectedLevel1()) game.setState(new GameState(new LoaderArenaBuilder(1).createArena()));
-                if (getModel().isSelectedLevel2() && getModel().getLevel1()) game.setState(new GameState(new LoaderArenaBuilder(2).createArena()));
-                if (getModel().isSelectedLevel3() && getModel().getLevel2()) game.setState(new GameState(new LoaderArenaBuilder(3).createArena()));
-                if (getModel().isSelectedFinalLevel() && getModel().getLevel3()) game.setState(new GameState(new LoaderArenaBuilder(4).createArena()));
+                if (getModel().isSelectedLevel1()) {
+                    game.setState(new GameState(new LoaderArenaBuilder(1).createArena()));
+                }
+                if (getModel().isSelectedLevel2()) {
+                    game.setState(new GameState(new LoaderArenaBuilder(2).createArena()));
+                }
+                if (getModel().isSelectedLevel3()) {
+                    game.setState(new GameState(new LoaderArenaBuilder(3).createArena()));
+                }
+                if (getModel().isSelectedFinalLevel()) {
+                    game.setState(new GameState(new LoaderArenaBuilder(4).createArena()));
+                }
                 if (getModel().isSelectedGoBack()) game.setState(new MenuState(new Menu()));
         }
     }

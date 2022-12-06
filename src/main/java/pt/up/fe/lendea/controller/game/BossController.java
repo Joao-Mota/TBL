@@ -12,6 +12,8 @@ import java.io.IOException;
 public class BossController extends GameController {
     private long lastMovement;
 
+    private boolean flag = false;
+
     public BossController(Arena arena) {
         super(arena);
 
@@ -22,8 +24,13 @@ public class BossController extends GameController {
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
         if (time - lastMovement > 1000) {
             for (Boss boss : getModel().getBosses()) {
+                if(boss.getHealth() == 0) {
+                    getModel().removeBoss(boss);
+                    flag = true;
+                }
                 moveBoss(boss, boss.getPosition().moveSide());
                 fire(boss);
+                if(flag) {flag = false; break;}
             }
             this.lastMovement = time;
         }

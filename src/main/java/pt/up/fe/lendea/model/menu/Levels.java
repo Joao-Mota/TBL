@@ -7,11 +7,6 @@ public class Levels {
     private final List<String> entries;
     private int currentEntry = 0;
 
-    private boolean Level1 = true;
-    private boolean Level2 = true;
-    private boolean Level3 = true;
-    private boolean FinalLevel = true;
-
     public Levels() {
         this.entries = Arrays.asList("Level 1", "Level 2", "Level 3", "Final Level", "Go Back");
     }
@@ -38,7 +33,7 @@ public class Levels {
     }
     public boolean isSelectedLevel1() {return isSelected(0);}
     public boolean isSelectedLevel2() {return isSelected(1);}
-    public boolean isSelectedLevel3() { return isSelected(2);}
+    public boolean isSelectedLevel3() {return isSelected(2);}
     public boolean isSelectedFinalLevel() {
         return isSelected(3);
     }
@@ -49,25 +44,4 @@ public class Levels {
     public int getNumberEntries() {
         return this.entries.size();
     }
-
-    public boolean getLevel1() {
-        return this.Level1;
-    }
-
-    public boolean getLevel2() {
-        return this.Level2;
-    }
-
-    public boolean getLevel3() {
-        return this.Level3;
-    }
-
-    public boolean getFinalLevel() {
-        return this.FinalLevel;
-    }
-
-    public void setLevel1(boolean value) {this.Level1 = value;}
-    public void setLevel2(boolean value) {this.Level2 = value;}
-    public void setLevel3(boolean value) {this.Level3 = value;}
-    public void setFinalLevel(boolean value) {this.FinalLevel = value;}
 }

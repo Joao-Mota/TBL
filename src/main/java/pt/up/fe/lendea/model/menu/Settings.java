@@ -8,7 +8,7 @@ public class Settings {
     private int currentEntry = 0;
 
     public Settings() {
-        this.entries = Arrays.asList("Music", "Go Back");
+        this.entries = Arrays.asList("Turn OFF Music", "Go Back");
     }
 
     public void nextEntry() {

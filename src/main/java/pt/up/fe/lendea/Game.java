@@ -29,7 +29,7 @@ public class Game {
     private void start() throws IOException {
         int FPS = 120;
         int frameTime = 1000 / FPS;
-        //state.playMusic();
+        state.playMusic();
 
         while (this.state != null) {
             long startTime = System.currentTimeMillis();
