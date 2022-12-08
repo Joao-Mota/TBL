@@ -42,7 +42,7 @@ Shooting:
 
 ### Planned features
 
-BGM – We plan to add background music, that would be able to be turned off in the options screen
+BGM – We plan to add background music
 
 
 Original user character – We plan to create a special font for the Pão de Forma
