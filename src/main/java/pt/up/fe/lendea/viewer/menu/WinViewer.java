@@ -12,11 +12,11 @@ public class WinViewer extends Viewer<Win> {
 
     @Override
     public void drawElements(GUI gui) {
-        gui.drawText(new Position(35, 3), "YOU COMPLETED THIS LEVEL!", "#FFA212");
+        gui.drawText(new Position(30, 3), "YOU COMPLETED THIS LEVEL!", "#FFA212");
 
         for (int i = 0; i < getModel().getNumberEntries(); i++)
             gui.drawText(
-                    new Position(5, 13 + i),
+                    new Position(5, 17 + i),
                     getModel().getEntry(i),
                     getModel().isSelected(i) ? "#FFA212" : "#FFFFFF");
     }

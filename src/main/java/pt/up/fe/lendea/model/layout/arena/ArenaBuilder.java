@@ -18,6 +18,7 @@ public abstract class ArenaBuilder {
         arena.setShots(createShots());
         arena.setBosses(createBosses());
         arena.setBossShots(createShots());
+        arena.setTimer(createTimer());
 
         return arena;
     }
@@ -39,4 +40,6 @@ public abstract class ArenaBuilder {
     protected abstract Exit createExit();
 
     protected abstract List<Boss> createBosses();
+
+    protected abstract Timer createTimer();
 }

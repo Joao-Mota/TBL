@@ -19,6 +19,9 @@ public class Arena {
     private List<Boss> bosses;
     private Exit exit;
 
+    private Timer timer;
+    private int currentLevel;
+
     public Arena(int width, int height) {
         this.width = width;
         this.height = height;
@@ -31,6 +34,13 @@ public class Arena {
     public int getHeight() {
         return height;
     }
+
+    public int getCurrentLevel() {return currentLevel;}
+
+    public void setCurrentLevel(int currentLevel) {this.currentLevel = currentLevel;}
+
+    public Timer getTimer() {return this.timer;}
+    public void setTimer(Timer timer) {this.timer = timer;}
 
     public Lendea getLendea() { return lendea; }
 

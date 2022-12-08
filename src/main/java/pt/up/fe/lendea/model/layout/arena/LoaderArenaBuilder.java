@@ -83,6 +83,15 @@ public class LoaderArenaBuilder extends ArenaBuilder {
     }
 
     @Override
+    protected Timer createTimer() {
+        for (String line : lines) {
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == 'L') return new Timer();
+        }
+        return null;
+    }
+
+    @Override
     protected ArrayList<Coin> createCoins() {
         ArrayList<Coin> coins = new ArrayList<>();
 

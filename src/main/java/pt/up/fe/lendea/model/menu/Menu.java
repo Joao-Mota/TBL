@@ -8,7 +8,7 @@ public class Menu {
     private int currentEntry = 0;
 
     public Menu() {
-        this.entries = Arrays.asList("Start", "Help", "Settings", "Exit");
+        this.entries = Arrays.asList("Start", "Help", "Exit");
     }
 
 
@@ -33,9 +33,8 @@ public class Menu {
     }
     public boolean isSelectedPlay() {return isSelected(0);}
     public boolean isSelectedHelp() {return isSelected(1);}
-    public boolean isSelectedSettings() { return isSelected(2);}
     public boolean isSelectedExit() {
-        return isSelected(3);
+        return isSelected(2);
     }
 
     public int getNumberEntries() {

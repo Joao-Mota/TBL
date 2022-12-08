@@ -21,9 +21,9 @@ public class HelpViewer extends Viewer<Help> {
 
         // Commands
         gui.drawText(new Position(5, 11), "Commands:", "#FFA212");
-        gui.drawText(new Position(5, 14), "WASD / Arrow Keys - Move", "#FFFFFF");
-        gui.drawText(new Position(5, 15), "SpaceBar - Shoot", "#FFFFFF");
-        gui.drawText(new Position(5, 16), "Q - GiveUp", "#FFFFFF");
+        gui.drawText(new Position(5, 14), "   WASD     - Move", "#FFFFFF");
+        gui.drawText(new Position(5, 15), "Arrow keys  - Shoot", "#FFFFFF");
+        gui.drawText(new Position(5, 16), "     Q      - Give Up", "#FFFFFF");
 
 
 
@@ -38,9 +38,9 @@ public class HelpViewer extends Viewer<Help> {
 
         // Elements
         gui.drawText(new Position(43, 11), "Elements:", "#FFA212");
-        gui.drawText(new Position(43, 14), "Player - *   | Shots - o", "#FFFFFF");
-        gui.drawText(new Position(43, 15), "Enemy  - @   | Walls - #", "#FFFFFF");
-        gui.drawText(new Position(43, 16), "Coin   - $   |          ", "#FFFFFF");
+        gui.drawText(new Position(43, 14), " Player  - *        | Shots - o", "#FFFFFF");
+        gui.drawText(new Position(43, 15), "Enemies  - @ / B    | Walls - #", "#FFFFFF");
+        gui.drawText(new Position(43, 16), "  Coin   - $        |          ", "#FFFFFF");
 
 
 

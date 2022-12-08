@@ -6,10 +6,8 @@ import pt.up.fe.lendea.gui.GUI;
 import pt.up.fe.lendea.model.menu.Help;
 import pt.up.fe.lendea.model.menu.Levels;
 import pt.up.fe.lendea.model.menu.Menu;
-import pt.up.fe.lendea.model.menu.Settings;
 import pt.up.fe.lendea.states.HelpState;
 import pt.up.fe.lendea.states.LevelsState;
-import pt.up.fe.lendea.states.SettingsState;
 
 import java.io.IOException;
 
@@ -29,7 +27,6 @@ public class MenuController extends Controller<Menu> {
                 break;
             case SELECT:
                 if (getModel().isSelectedExit()) game.setState(null);
-                if (getModel().isSelectedSettings()) game.setState(new SettingsState(new Settings()));
                 if (getModel().isSelectedHelp()) game.setState(new HelpState(new Help()));
                 if (getModel().isSelectedPlay()) game.setState(new LevelsState(new Levels()));
         }

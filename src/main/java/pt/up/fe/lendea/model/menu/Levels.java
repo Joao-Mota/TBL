@@ -44,4 +44,5 @@ public class Levels {
     public int getNumberEntries() {
         return this.entries.size();
     }
+
 }
