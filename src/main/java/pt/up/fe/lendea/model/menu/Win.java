@@ -8,7 +8,7 @@ public class Win {
     private int currentEntry = 0;
 
     public Win() {
-        this.entries = Arrays.asList("Press Enter to go back to the menu");
+        this.entries = Arrays.asList("--Press Enter to go back to the menu--");
     }
 
     public void nextEntry() {
