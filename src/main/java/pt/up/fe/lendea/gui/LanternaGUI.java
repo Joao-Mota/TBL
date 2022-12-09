@@ -52,7 +52,7 @@ public class LanternaGUI implements GUI {
     }
 
     private AWTTerminalFontConfiguration loadSquareFont() throws URISyntaxException, FontFormatException, IOException {
-        URL resource = getClass().getClassLoader().getResource("fonts/teste.ttf");
+        URL resource = getClass().getClassLoader().getResource("fonts/final_font.ttf");
 
         File fontFile = new File(resource.toURI());
         Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
@@ -96,10 +96,10 @@ public class LanternaGUI implements GUI {
     public void drawCoin(Position position) { drawCharacter(position.getX(), position.getY(), '$', "#999933");}
 
     @Override
-    public void drawShot(Position position) { drawCharacter(position.getX(), position.getY(), '0', "#999933");}
+    public void drawShot(Position position) { drawCharacter(position.getX(), position.getY(), '{', "#999933");}
 
     @Override
-    public void drawBossShot(Position position) { drawCharacter(position.getX(), position.getY(), '.', "#999933");}
+    public void drawBossShot(Position position) { drawCharacter(position.getX(), position.getY(), '}', "#999933");}
 
     @Override
     public void drawWall(Position position) {
@@ -113,7 +113,7 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawBoss(Position position) {
-        drawCharacter(position.getX(), position.getY(), 'B', "#CC0000");
+        drawCharacter(position.getX(), position.getY(), '[', "#CC0000");
     }
 
     @Override
