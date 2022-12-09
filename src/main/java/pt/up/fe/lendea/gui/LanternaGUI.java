@@ -89,17 +89,17 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawLendea(Position position) {
-        drawCharacter(position.getX(), position.getY(), '*', "#18D42F");
+        drawCharacter(position.getX(), position.getY(), '*', "#FFC96A");
     }
 
     @Override
-    public void drawCoin(Position position) { drawCharacter(position.getX(), position.getY(), '$', "#999933");}
+    public void drawCoin(Position position) { drawCharacter(position.getX(), position.getY(), '$', "#DFD928");}
 
     @Override
-    public void drawShot(Position position) { drawCharacter(position.getX(), position.getY(), '{', "#999933");}
+    public void drawShot(Position position) { drawCharacter(position.getX(), position.getY(), '{', "#DA9720");}
 
     @Override
-    public void drawBossShot(Position position) { drawCharacter(position.getX(), position.getY(), '}', "#999933");}
+    public void drawBossShot(Position position) { drawCharacter(position.getX(), position.getY(), '}', "#DE1616");}
 
     @Override
     public void drawWall(Position position) {
@@ -108,12 +108,12 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawMonster(Position position) {
-        drawCharacter(position.getX(), position.getY(), '@', "#CC0000");
+        drawCharacter(position.getX(), position.getY(), '@', "#FEFBF0");
     }
 
     @Override
     public void drawBoss(Position position) {
-        drawCharacter(position.getX(), position.getY(), '[', "#CC0000");
+        drawCharacter(position.getX(), position.getY(), '[', "#F000F0");
     }
 
     @Override
