@@ -5,11 +5,9 @@ import pt.up.fe.lendea.gui.GUI;
 import pt.up.fe.lendea.model.layout.arena.Arena;
 
 public class TimerController extends GameController{
-    private long lastMovement;
 
     public TimerController(Arena arena) {
         super(arena);
-        this.lastMovement = 0;
     }
 
     public void increaseTimer() {

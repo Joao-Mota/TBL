@@ -54,6 +54,8 @@ public class ShotController extends GameController{
             shot.setPosition(position);
             if (getModel().isBoss(position)) {
                 getModel().decreaseBossHealth(position);
+                getModel().removeShot(shot);
+                flag = true;
             }
         }
         getModel().removeMonster(shot);

@@ -17,11 +17,11 @@ public class GameViewer extends Viewer<Arena> {
     public void drawElements(GUI gui) {
         drawElements(gui, getModel().getWalls(), new WallViewer());
         drawElements(gui, getModel().getMonsters(), new MonsterViewer());
+        drawElements(gui, getModel().getBosses(), new BossViewer());
         drawElements(gui, getModel().getCoins(), new CoinViewer());
         drawElement(gui, getModel().getLendea(), new LendeaViewer());
         drawElements(gui, getModel().getShots(), new ShotViewer());
         drawElements(gui, getModel().getBossShots(), new BossShotViewer());
-        drawElements(gui, getModel().getBosses(), new BossViewer());
 
         gui.drawText(new Position(69, 4), "LEVEL", "#FFFFFF");
         gui.drawText(new Position(67, 20), "HP: " + getModel().getLendea().getHealth(), "#FA1616");

@@ -80,6 +80,7 @@ public class Arena {
             }
         }
     }
+    public void removeBoss(Boss boss) {bosses.remove(boss);}
 
     public void removeShot(Shot shot) {
         shots.remove(shot);
@@ -88,8 +89,6 @@ public class Arena {
     public void removeBossShot(Shot shot) {
         BossShots.remove(shot);
     }
-
-    public void removeBoss(Boss boss) {bosses.remove(boss);}
 
     public List<Wall> getWalls() {
         return walls;
@@ -120,8 +119,10 @@ public class Arena {
 
     public void decreaseBossHealth(Position position) {
         for(Boss boss : bosses) {
-            if(boss.getPosition().equals(position))
+            if(boss.getPosition().equals(position)) {
                 boss.decreaseHealth();
+                break;
+            }
         }
     }
 

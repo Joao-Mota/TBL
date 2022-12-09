@@ -3,6 +3,7 @@ package pt.up.fe.lendea.viewer;
 import pt.up.fe.lendea.gui.GUI;
 import pt.up.fe.lendea.model.Position;
 import pt.up.fe.lendea.model.layout.arena.Arena;
+import pt.up.fe.lendea.model.layout.elements.monsters.Boss;
 import pt.up.fe.lendea.viewer.layout.GameViewer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,10 +27,13 @@ class ArenaViewerTest {
 
         arena.setWalls(Arrays.asList(new Wall(1, 2), new Wall(2, 3), new Wall(3, 4)));
         arena.setMonsters(Arrays.asList(new Monster(4, 5), new Monster(5, 6)));
+        arena.setBosses(Arrays.asList(new Boss(6, 5), new Boss(6, 4)));
         arena.setLendea(new Lendea(5, 8));
         arena.setExit(new Exit(10, 9));
         arena.setCoins(Arrays.asList(new Coin(6, 7), new Coin(9, 8)));
         arena.setShots(Arrays.asList());
+        arena.setBossShots(Arrays.asList());
+        arena.setTimer(new Timer());
     }
 
     // Testa se o ArenaViewer consegue desenhar as Walls
@@ -51,6 +55,16 @@ class ArenaViewerTest {
         Mockito.verify(gui, Mockito.times(1)).drawMonster(new Position(4, 5));
         Mockito.verify(gui, Mockito.times(1)).drawMonster(new Position(5, 6));
         Mockito.verify(gui, Mockito.times(2)).drawMonster(Mockito.any(Position.class));
+    }
+
+    // Testa se o ArenaViewer consegue desenhar os Bosses
+    @Test
+    void drawBosses() throws IOException {
+        viewer.draw(gui);
+
+        Mockito.verify(gui, Mockito.times(1)).drawBoss(new Position(6, 5));
+        Mockito.verify(gui, Mockito.times(1)).drawBoss(new Position(6, 4));
+        Mockito.verify(gui, Mockito.times(2)).drawBoss(Mockito.any(Position.class));
     }
 
     // Testa se o ArenaViewer consegue desenhar as Coins

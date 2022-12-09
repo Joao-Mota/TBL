@@ -32,6 +32,8 @@ class LendeaControllerTest {
         arena.setMonsters(Arrays.asList());
         arena.setCoins(Arrays.asList());
         arena.setShots(Arrays.asList());
+        arena.setBosses(Arrays.asList());
+        arena.setBossShots(Arrays.asList());
         arena.setExit(new Exit(10, 9));
 
         controller = new LendeaController(arena);
