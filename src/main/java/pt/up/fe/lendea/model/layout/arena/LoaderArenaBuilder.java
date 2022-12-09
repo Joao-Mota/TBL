@@ -50,7 +50,7 @@ public class LoaderArenaBuilder extends ArenaBuilder {
         for (int y = 0; y < lines.size(); y++) {
             String line = lines.get(y);
             for (int x = 0; x < line.length(); x++)
-                if (line.charAt(x) == '#' || line.charAt(x) == '|') walls.add(new Wall(x, y));
+                if (line.charAt(x) == '#') walls.add(new Wall(x, y));
         }
 
         return walls;
@@ -63,7 +63,7 @@ public class LoaderArenaBuilder extends ArenaBuilder {
         for (int y = 0; y < lines.size(); y++) {
             String line = lines.get(y);
             for (int x = 0; x < line.length(); x++)
-                if (line.charAt(x) == 'M') monsters.add(new Monster1(x, y));
+                if (line.charAt(x) == '@') monsters.add(new Monster1(x, y));
         }
 
         return monsters;
@@ -76,7 +76,7 @@ public class LoaderArenaBuilder extends ArenaBuilder {
         for (int y = 0; y < lines.size(); y++) {
             String line = lines.get(y);
             for (int x = 0; x < line.length(); x++)
-                if (line.charAt(x) == 'B') bosses.add(new Boss(x, y));
+                if (line.charAt(x) == '[') bosses.add(new Boss(x, y));
         }
 
         return bosses;
@@ -86,7 +86,7 @@ public class LoaderArenaBuilder extends ArenaBuilder {
     protected Timer createTimer() {
         for (String line : lines) {
             for (int x = 0; x < line.length(); x++)
-                if (line.charAt(x) == 'L') return new Timer();
+                if (line.charAt(x) == '*') return new Timer();
         }
         return null;
     }
@@ -111,7 +111,7 @@ public class LoaderArenaBuilder extends ArenaBuilder {
         for (int y = 0; y < lines.size(); y++) {
             String line = lines.get(y);
             for (int x = 0; x < line.length(); x++)
-                if (line.charAt(x) == 'o') shots.add(new LendeaShot(x, y, true, false, false, false));
+                if (line.charAt(x) == '{') shots.add(new LendeaShot(x, y, true, false, false, false));
         }
 
         return shots;
@@ -122,7 +122,7 @@ public class LoaderArenaBuilder extends ArenaBuilder {
         for (int y = 0; y < lines.size(); y++) {
             String line = lines.get(y);
             for (int x = 0; x < line.length(); x++)
-                if (line.charAt(x) == 'L') return new Lendea(x, y);
+                if (line.charAt(x) == '*') return new Lendea(x, y);
         }
         return null;
     }
