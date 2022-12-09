@@ -20,10 +20,10 @@ public class HelpViewer extends Viewer<Help> {
         gui.drawText(new Position(28, 7), "##  ## ##### ##### ##   ", "#FFA212");
 
         // Commands
-        gui.drawText(new Position(5, 11), "Commands:", "#FFA212");
-        gui.drawText(new Position(5, 14), "   WASD     - Move", "#FFFFFF");
-        gui.drawText(new Position(5, 15), "Arrow keys  - Shoot", "#FFFFFF");
-        gui.drawText(new Position(5, 16), "     Q      - Give Up", "#FFFFFF");
+        gui.drawText(new Position(5, 11), "COMMANDS:", "#FFA212");
+        gui.drawText(new Position(5, 14), "  WASD       - MOVE    ", "#FFFFFF");
+        gui.drawText(new Position(5, 15), "  ARROW KEYS - SHOOT   ", "#FFFFFF");
+        gui.drawText(new Position(5, 16), "  Q          - GIVE UP ", "#FFFFFF");
 
 
 
@@ -37,24 +37,26 @@ public class HelpViewer extends Viewer<Help> {
         gui.drawText(new Position(40, 17), "|", "#FFFFFF");
 
         // Elements
-        gui.drawText(new Position(43, 11), "Elements:", "#FFA212");
-        gui.drawText(new Position(43, 14), " Player  - *        | Shots - o", "#FFFFFF");
-        gui.drawText(new Position(43, 15), "Enemies  - @ / B    | Walls - #", "#FFFFFF");
-        gui.drawText(new Position(43, 16), "  Coin   - $        |          ", "#FFFFFF");
+        gui.drawText(new Position(43, 11), "ELEMENTS:", "#FFA212");
+        gui.drawText(new Position(43, 14), "  PLAYER  - *      | SHOTS - { / }", "#FFFFFF");
+        gui.drawText(new Position(43, 15), "  ENEMIES - @      | WALLS - #", "#FFFFFF");
+        gui.drawText(new Position(43, 16), "  COIN    - $      | BOSS  - [", "#FFFFFF");
 
 
 
         gui.drawText(new Position(5, 18), "________________________________________________________________________", "#FFFFFF");
 
         // Info
-        gui.drawText(new Position(5, 21), "Info:", "#FFA212");
-        gui.drawText(new Position(5, 24), "You are a Lendea, a mythical creature", "#FFFFFF");
-        gui.drawText(new Position(5, 25), "that rides a pao de forma", "#FFFFFF");
-        gui.drawText(new Position(5, 26), "and shoots bread to defend itself", "#FFFFFF");
-        gui.drawText(new Position(5, 27), "from the evil forces of the world.", "#FFFFFF");
-        gui.drawText(new Position(5, 28), "You must collect coins to buy bread", "#FFFFFF");
-        gui.drawText(new Position(5, 29), "and defeat the enemies.", "#FFFFFF");
-        gui.drawText(new Position(5, 30), "Good luck!", "#FFFFFF");
+        gui.drawText(new Position(5, 21), "INFO:", "#FFA212");
+        gui.drawText(new Position(5, 24), "YOU ARE A LENDEA, A MYTHICAL CREATURE", "#FFFFFF");
+        gui.drawText(new Position(5, 25), "THAT RIDES A PAO DE FORMA", "#FFFFFF");
+        gui.drawText(new Position(5, 26), "AND SHOOTS BREAD TO DEFEND ITSELF", "#FFFFFF");
+        gui.drawText(new Position(5, 27), "FROM THE EVIL FORCES OF THE WORLD.", "#FFFFFF");
+        gui.drawText(new Position(5, 28), "YOU MUST SLAY EVERY ENEMIE", "#FFFFFF");
+        gui.drawText(new Position(5, 29), "DONT FORGET TO FILL YOUR POCKETS ALONG THE WAY!", "#FFFFFF");
+        gui.drawText(new Position(5, 30), "DEFEAT THE EVIL TOSTER TO FINISH YOUR QUEST,", "#FFFFFF");
+        gui.drawText(new Position(5, 31), "AND CLAIM YOUR PRICE!", "#FFFFFF");
+        gui.drawText(new Position(5, 33), "GOOD LUCK LENDEA, YOU WILL NEED IT!", "#FFFFFF");
 
 
         for (int i = 0; i < getModel().getNumberEntries(); i++)

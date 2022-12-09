@@ -8,7 +8,7 @@ public class Levels {
     private int currentEntry = 0;
 
     public Levels() {
-        this.entries = Arrays.asList("Level 1", "Level 2", "Level 3", "Final Level", "Go Back");
+        this.entries = Arrays.asList("LEVEL - 1", "LEVEL - 2", "LEVEL - 3", "FINAL LEVEL", "GO BACK!");
     }
 
 

@@ -24,9 +24,9 @@ public class GameViewer extends Viewer<Arena> {
         drawElements(gui, getModel().getBossShots(), new BossShotViewer());
 
         gui.drawText(new Position(69, 4), "LEVEL", "#FFFFFF");
-        gui.drawText(new Position(67, 20), "HP: " + getModel().getLendea().getHealth(), "#FA1616");
-        gui.drawText(new Position(67, 24), "Coins: " + getModel().getLendea().getCoins(), "#F6C345");
-        gui.drawText(new Position(67, 28), "Timer: " + getModel().getTimer().getSeconds(), "#FFFFFF");
+        gui.drawText(new Position(66, 20), "HP: " + getModel().getLendea().getHealth() + " &", "#FA1616");
+        gui.drawText(new Position(66, 24), "COINS: " + getModel().getLendea().getCoins() + " $", "#F6C345");
+        gui.drawText(new Position(66, 39), "TIMER: " + getModel().getTimer().getSeconds(), "#FFFFFF");
     }
 
     private <T extends Element> void drawElements(GUI gui, List<T> elements, ElementViewer<T> viewer) {

@@ -12,7 +12,7 @@ public class LevelsViewer extends Viewer<Levels> {
 
     @Override
     public void drawElements(GUI gui) {
-        gui.drawText(new Position(35, 3), "Levels", "#FFA212");
+        gui.drawText(new Position(35, 3), "LEVELS", "#FFA212");
 
         for (int i = 0; i < getModel().getNumberEntries(); i++) {
             gui.drawText(
