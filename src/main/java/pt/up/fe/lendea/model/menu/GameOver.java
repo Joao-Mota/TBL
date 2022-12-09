@@ -8,7 +8,7 @@ public class GameOver {
     private int currentEntry = 0;
 
     public GameOver() {
-        this.entries = Arrays.asList("Press Enter to go back");
+        this.entries = Arrays.asList("-- Press Enter to go back --");
     }
 
     public void nextEntry() {

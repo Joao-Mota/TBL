@@ -25,7 +25,7 @@ public class WinViewer extends Viewer<Win> {
 
         for (int i = 0; i < getModel().getNumberEntries(); i++)
             gui.drawText(
-                    new Position(20, 35 + i),
+                    new Position(19, 35 + i),
                     getModel().getEntry(i),
                     getModel().isSelected(i) ? "#FFA212" : "#FFFFFF");
     }
