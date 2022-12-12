@@ -52,10 +52,10 @@ public class HelpViewer extends Viewer<Help> {
         gui.drawText(new Position(5, 25), "THAT RIDES A PAO DE FORMA", "#FFFFFF");
         gui.drawText(new Position(5, 26), "AND SHOOTS BREAD TO DEFEND ITSELF", "#FFFFFF");
         gui.drawText(new Position(5, 27), "FROM THE EVIL FORCES OF THE WORLD.", "#FFFFFF");
-        gui.drawText(new Position(5, 28), "YOU MUST SLAY EVERY ENEMIE", "#FFFFFF");
-        gui.drawText(new Position(5, 29), "DONT FORGET TO FILL YOUR POCKETS ALONG THE WAY!", "#FFFFFF");
-        gui.drawText(new Position(5, 30), "DEFEAT THE EVIL TOSTER TO FINISH YOUR QUEST,", "#FFFFFF");
-        gui.drawText(new Position(5, 31), "AND CLAIM YOUR PRICE!", "#FFFFFF");
+        gui.drawText(new Position(5, 28), "YOU MUST SLAY EVERY ENEMY", "#FFFFFF");
+        gui.drawText(new Position(5, 29), "DON'T FORGET TO FILL YOUR POCKETS ALONG THE WAY!", "#FFFFFF");
+        gui.drawText(new Position(5, 30), "DEFEAT THE EVIL TOASTER TO FINISH YOUR QUEST,", "#FFFFFF");
+        gui.drawText(new Position(5, 31), "AND CLAIM YOUR PRIZE!", "#FFFFFF");
         gui.drawText(new Position(5, 33), "GOOD LUCK LENDEA, YOU WILL NEED IT!", "#FFFFFF");
 
 
