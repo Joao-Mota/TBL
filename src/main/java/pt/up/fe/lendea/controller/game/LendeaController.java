@@ -46,16 +46,16 @@ public class LendeaController extends GameController {
     }
 
     private void fireUP() {
-        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX(), getModel().getLendea().getPosition().getY() - 1, true, false, false, false));
+        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX(), getModel().getLendea().getPosition().getY(), true, false, false, false));
     }
     private void fireRight() {
-        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX() + 1, getModel().getLendea().getPosition().getY(), false, true, false, false));
+        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX(), getModel().getLendea().getPosition().getY(), false, true, false, false));
     }
     private void fireDown() {
-        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX(), getModel().getLendea().getPosition().getY() + 1, false, false, true, false));
+        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX(), getModel().getLendea().getPosition().getY(), false, false, true, false));
     }
     private void fireLeft() {
-        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX() - 1, getModel().getLendea().getPosition().getY(), false, false, false, true));
+        getModel().update(new LendeaShot(getModel().getLendea().getPosition().getX(), getModel().getLendea().getPosition().getY(), false, false, false, true));
     }
 
     @Override
