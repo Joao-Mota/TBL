@@ -2,7 +2,7 @@
 
 We decided to create an original game, based on *The Binding of Isaac*, where the user would control the hero, “Pão de Forma”, and aim to kill enemies by shooting them.
 
-To clear the levels, Pão de Forma must collect every coin on the map without losing all of his HP. When that happens, a door will open, allowing him to progress.
+To clear the levels, Pão de Forma must kill every enemy on the map without losing all of his HP. When that happens, a door will open, allowing him to progress.
 
 This project was developed by João Coelho ([up202004846@fe.up.pt]), João Mota ([up202108677@fe.up.pt]) and Pedro Landolt ([up202103337@fe.up.pt]) for LDTS 2022/23.
 
@@ -17,7 +17,7 @@ Win Screen – When the player clears a level, a special screen appears, congrat
 Menu – We have created a menu that allows the player to start or exit the game
 
 
-Shooting – Using the spacebar, you can fire shots that kill enemies, from right to left
+Multidirectional shooting – Using the arrows, you can fire shots that kill enemies, in all directions
 
 
 Help Screen – Contains information on how to play the game and its elements
@@ -26,41 +26,45 @@ Help Screen – Contains information on how to play the game and its elements
 Game Over Screen – When the player loses, a special screen pops up with a Game Over Message
 
 
+BGM - The game has background music playing
+
+
+Original design for elements - The game has original designs for the main character, coins, shots and enemies
+
+
+4 Levels - The game has 3 regular levels plus a special boss level, with enemies that fire back and are harder to kill
+
+
+Timer - There's a timer that shows the player how long he is taking on the level that he is playing
+
+
 Some Screenshots:
 
 
 Help Screen:
 
-![image](https://user-images.githubusercontent.com/92723402/204062661-a4dabda3-e055-47aa-9f09-c643713722dd.png)
+![image](https://user-images.githubusercontent.com/92723402/207064538-d384e2c0-df1a-4444-a690-7f4d28c724d9.png)
 
 
-Shooting: 
+Win Screen: 
 
-![image](https://user-images.githubusercontent.com/92723402/204062683-63f1e2cd-c2ed-42fc-aae5-a08973a8b5ff.png)
-
-
-
-### Planned features
-
-BGM – We plan to add background music
+![image](https://user-images.githubusercontent.com/92723402/207064658-17cd7ed1-3868-40a7-93bb-e345efe8633c.png)
 
 
-Original user character – We plan to create a special font for the Pão de Forma
+Levels:
+
+![image](https://user-images.githubusercontent.com/92723402/207064890-3877e8c8-ef7f-4b3e-9063-a66e2e870fa6.png)
 
 
-Original Monsters - We plan to create a special font for the Monsters
+Game Over Screen:
+
+![image](https://user-images.githubusercontent.com/92723402/207065260-a0dd5bb8-bf6b-4537-8a28-fda35b3a203e.png)
 
 
-More levels – We plan to add more levels
+Shooting:
 
+![image](https://user-images.githubusercontent.com/92723402/207065958-a7d2cb80-3aa4-478e-aaed-34852a3f9f91.png)
 
-Timer – We plan to add a timer so the user may know how long it took to clear a level
-
-
-Multidirectional shooting – We plan to allow the user to shoot in more than one direction
-
-
-![image](https://user-images.githubusercontent.com/92723402/204062778-a1c9d05e-f68c-4332-a7c9-6dae67a9e6ce.png)
 
 
 
