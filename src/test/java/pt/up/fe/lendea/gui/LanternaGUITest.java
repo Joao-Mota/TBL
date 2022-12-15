@@ -29,7 +29,7 @@ class LanternaGUITest {
     void drawLendea() {
         gui.drawLendea(new Position(1, 1));
 
-        Mockito.verify(tg, Mockito.times(1)).setForegroundColor(new TextColor.RGB(24, 212, 47));
+        Mockito.verify(tg, Mockito.times(1)).setForegroundColor(new TextColor.RGB(255, 201, 106));
         Mockito.verify(tg, Mockito.times(1)).putString(1, 1, "*");
     }
 

@@ -3,3 +3,4 @@
 out/
 build/
 *.iml
+!(build/reports/pitest/202212152143/index.html)
