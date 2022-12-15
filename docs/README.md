@@ -134,7 +134,7 @@ Test Coverage Screenshot:
 ![image](https://user-images.githubusercontent.com/92723402/204062863-59f64adc-2a86-436d-b2d2-1f50a2d9f158.png)
 
 
-Link to Mutation Testing report: docs/index.html
+Link to Mutation Testing report: [docs/index.html](https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/docs/index.html)
 
 ### Self-evaluation
 
