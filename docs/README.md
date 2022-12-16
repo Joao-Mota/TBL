@@ -1,4 +1,4 @@
-## LDTS_<L07><GR01> - <The Binding of Lêndea>
+## LDTS<L07><GR01> - <The Binding of Lêndea>
 
 We decided to create an original game, based on *The Binding of Isaac*, where the user would control the hero, “Pão de Forma”, and aim to kill enemies by shooting them.
 
@@ -131,8 +131,7 @@ UML Diagram:
 
 Test Coverage Screenshot:
 
-![image](https://user-images.githubusercontent.com/92723402/204062863-59f64adc-2a86-436d-b2d2-1f50a2d9f158.png)
-
+![test coverage](https://user-images.githubusercontent.com/92723402/208150891-cbc96cf7-2e0c-4932-8d23-d8fc2546c25d.png)
 
 Link to Mutation Testing report: [docs/index.html](https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/docs/index.html)
 
