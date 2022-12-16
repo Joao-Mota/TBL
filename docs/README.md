@@ -79,9 +79,9 @@ The State Pattern was useful because it allowed us to alter the health, score an
 
 Code examples:
 
-State: [project-l07gr01/State.java at main · FEUP-LDTS-2022/project-l07gr01 (github.com)](https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/com/aor/lendea/states/State.java)
+State: https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/pt/up/fe/lendea/states/State.java
 
-GameState: [project-l07gr01/GameState.java at main · FEUP-LDTS-2022/project-l07gr01 (github.com)](https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/com/aor/lendea/states/GameState.java)
+GameState: https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/pt/up/fe/lendea/states/GameState.java
 
 
 
@@ -90,11 +90,11 @@ The Game Loop pattern allowed us to process input to move the character, update 
 
 Code examples:
 
-State: [project-l07gr01/State.java at main · FEUP-LDTS-2022/project-l07gr01 (github.com)](https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/com/aor/lendea/states/State.java)
+State: https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/pt/up/fe/lendea/states/State.java
 
-Controller: [project-l07gr01/Controller.java at main · FEUP-LDTS-2022/project-l07gr01 (github.com)](https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/com/aor/lendea/controller/Controller.java)
+Controller: https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/pt/up/fe/lendea/controller/Controller.java
 
-GameOverController: [project-l07gr01/GameOverController.java at main · FEUP-LDTS-2022/project-l07gr01 (github.com)](https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/com/aor/lendea/controller/menu/GameOverController.java)
+GameOverController: https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/pt/up/fe/lendea/controller/menu/GameOverController.java
 
 
 
@@ -103,9 +103,9 @@ The Factory Method pattern allowed us to instantiate different methods for our S
 
 Code examples:
 
-State: [project-l07gr01/State.java at main · FEUP-LDTS-2022/project-l07gr01 (github.com)](https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/com/aor/lendea/states/State.java)
+State: https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/pt/up/fe/lendea/states/State.java
 
-GameState: [project-l07gr01/GameState.java at main · FEUP-LDTS-2022/project-l07gr01 (github.com)](https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/com/aor/lendea/states/GameState.java)
+GameState: https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/pt/up/fe/lendea/states/GameState.java
 
 
 
@@ -114,11 +114,11 @@ We used the MVC Architectural Pattern to have less dependency between components
 
 Code examples:
 
-Win: [project-l07gr01/Win.java at main · FEUP-LDTS-2022/project-l07gr01 (github.com)](https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/com/aor/lendea/model/win/Win.java)
+Win: https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/pt/up/fe/lendea/model/menu/Win.java
 
-WinController: [project-l07gr01/WinController.java at main · FEUP-LDTS-2022/project-l07gr01 (github.com)](https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/com/aor/lendea/controller/menu/WinController.java)
+WinController: https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/pt/up/fe/lendea/controller/menu/WinController.java
 
-Win Viewer: [project-l07gr01/WinViewer.java at main · FEUP-LDTS-2022/project-l07gr01 (github.com)](https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/com/aor/lendea/viewer/win/WinViewer.java)
+Win Viewer: https://github.com/FEUP-LDTS-2022/project-l07gr01/blob/main/src/main/java/pt/up/fe/lendea/viewer/menu/WinViewer.java
 
 
 UML Diagram:
