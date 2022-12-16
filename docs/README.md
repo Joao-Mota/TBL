@@ -123,7 +123,7 @@ Win Viewer: [project-l07gr01/WinViewer.java at main · FEUP-LDTS-2022/project-l0
 
 UML Diagram:
 
-![image](https://user-images.githubusercontent.com/92723402/204062831-d3e8d77c-abc2-4da4-ad7f-462c13ef4fe3.png)
+![uml drawio](https://user-images.githubusercontent.com/92723402/208151789-9d48261a-6d02-4531-91c5-1c8b45a04a24.png)
 
 
 
