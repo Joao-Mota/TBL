@@ -12,6 +12,4 @@ Some screenshots:
 
 ![image](https://user-images.githubusercontent.com/92723402/207061892-1fc0c342-9a6c-4eb4-9f5e-c4986ec9c921.png)
 
-![image](https://user-images.githubusercontent.com/92723402/207059994-04a1ffb0-e3cf-4b0f-a973-94e4b2df416d.png)
-
 ![The_Binding_of_Lendea](https://user-images.githubusercontent.com/92723402/209191871-bfb48d2a-4ade-449a-8a25-d6ca439960f5.gif)
